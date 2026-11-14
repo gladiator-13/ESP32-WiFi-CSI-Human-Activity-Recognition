@@ -58,9 +58,9 @@ Each complex measurement contains:
 
 The CSI amplitude is calculated as:
 
-\[
-A_k = \sqrt{Re_k^2 + Im_k^2}
-\]
+$$
+A_k = \sqrt{\text{Re}_k^2 + \text{Im}_k^2}
+$$
 
 where \(k\) represents the subcarrier index.
 
@@ -320,8 +320,8 @@ Both within-location and cross-location evaluation will be considered.
 | Batch preprocessing | Completed |
 | Metadata generation | Completed |
 | Preprocessing validation | Completed |
-| Participant-wise splitting | Next |
-| LOLO evaluation splits | Planned |
+| Participant-wise splitting | Completed |
+| LOLO evaluation splits | Next |
 | Window generation | Planned |
 | Model development | Planned |
 | Model evaluation | Planned |
