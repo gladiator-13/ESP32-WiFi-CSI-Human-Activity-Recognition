@@ -36,7 +36,7 @@ HAMPel_THRESHOLD = 3.0
 SG_WINDOW = 11
 SG_POLYORDER = 3
 
-MAX_GAP_SECONDS = 0.15
+MAX_GAP_SECONDS = 0.20
 
 
 # ==========================================
@@ -156,9 +156,15 @@ def resample_csi(timestamps, amplitudes):
 
     relative_time = timestamps - timestamps[0]
 
-    # Reject recordings with large packet gaps
-    if np.max(np.diff(relative_time)) > MAX_GAP_SECONDS:
-        raise ValueError("Large packet gap detected.")
+    # Calculate packet time intervals
+    time_diffs = np.diff(relative_time)
+
+    # Reject recordings with interruptions exceeding 200 ms
+    if np.max(time_diffs) > MAX_GAP_SECONDS:
+        raise ValueError(
+            f"Large packet gap detected: "
+            f"{np.max(time_diffs):.4f} seconds"
+        )
 
     if relative_time[-1] < RECORDING_DURATION:
         raise ValueError("Recording is shorter than 20 seconds.")

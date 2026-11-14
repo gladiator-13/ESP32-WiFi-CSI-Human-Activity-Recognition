@@ -1,7 +1,3 @@
 raw_file,error
-data\data\P11\P11_A10_R1_1794050135.csv,Large packet gap detected.
-data\data\P12\P12_A17_R1_1794051640.csv,Large packet gap detected.
-data\data\P26\P26_A10_R1_1794407243.csv,Large packet gap detected.
-data\data\P26\P26_A18_R1_1794407419.csv,Large packet gap detected.
-data\data\P27\P27_A16_R1_1794408159.csv,Large packet gap detected.
-data\data\P27\P27_A19_R1_1794408319.csv,Large packet gap detected.
+data\data\P26\P26_A18_R1_1794407419.csv,Large packet gap detected: 0.3768 seconds
+data\data\P27\P27_A19_R1_1794408319.csv,Large packet gap detected: 0.2973 seconds
