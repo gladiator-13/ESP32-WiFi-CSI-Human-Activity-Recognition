@@ -43,7 +43,7 @@ def get_location(participant):
 # --------------------------------------------------
 
 def extract_metadata(file_path):
-    pattern = r"^(P\d+)_A(\d+)_R(\d+)_.*\.csv$"
+    pattern = r"^(P\d+)_(A(\d+)|BASE)_R(\d+)_.*\.csv$"
 
     match = re.match(pattern, file_path.name)
 
@@ -53,8 +53,14 @@ def extract_metadata(file_path):
         )
 
     participant = match.group(1)
-    activity = int(match.group(2))
-    repetition = int(match.group(3))
+    activity_label = match.group(2)
+    repetition = int(match.group(4))
+
+    # BASE recordings represent activity 0.
+    activity = (
+        0 if activity_label == "BASE"
+        else int(match.group(3))
+    )
 
     recording_type = (
         "baseline" if activity == 0 else "activity"
@@ -69,7 +75,6 @@ def extract_metadata(file_path):
         "location": get_location(participant),
         "raw_file": str(file_path.relative_to(PROJECT_ROOT)),
     }
-
 
 # --------------------------------------------------
 # 4. Process all recordings

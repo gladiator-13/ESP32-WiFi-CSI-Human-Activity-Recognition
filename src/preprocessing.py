@@ -36,7 +36,7 @@ HAMPel_THRESHOLD = 3.0
 SG_WINDOW = 11
 SG_POLYORDER = 3
 
-MAX_GAP_SECONDS = 0.1
+MAX_GAP_SECONDS = 0.15
 
 
 # ==========================================
@@ -44,19 +44,36 @@ MAX_GAP_SECONDS = 0.1
 # ==========================================
 
 def parse_csi_line(csi_line):
+    """
+    Extract 128 integer CSI values from the bracketed array.
+    Returns a (64, 2) array or None if invalid.
+    """
 
-    match = re.search(r"\[(.*?)\]", str(csi_line))
+    if not isinstance(csi_line, str):
+        return None
+
+    match = re.search(r"\[([^\]]*)\]", csi_line)
 
     if match is None:
         return None
 
-    values = np.fromstring(match.group(1), sep=" ")
+    array_text = match.group(1)
+
+    # Extract signed integer values robustly.
+    values = re.findall(r"[-+]?\d+", array_text)
 
     if len(values) != 128:
         return None
 
-    return values.reshape(64, 2)
+    try:
+        csi_array = np.asarray(values, dtype=np.float32)
+    except (ValueError, OverflowError):
+        return None
 
+    if not np.isfinite(csi_array).all():
+        return None
+
+    return csi_array.reshape(64, 2)
 
 # ==========================================
 # 2. EXTRACT AMPLITUDE
