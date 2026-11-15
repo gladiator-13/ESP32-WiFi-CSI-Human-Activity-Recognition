@@ -30,3 +30,9 @@ env/
 # Temporary files
 *.log
 Thumbs.db
+
+# Trained model binaries
+models/
+
+# Keep generated datasets out of Git
+data/

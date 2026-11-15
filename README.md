@@ -321,8 +321,8 @@ Both within-location and cross-location evaluation will be considered.
 | Metadata generation | Completed |
 | Preprocessing validation | Completed |
 | Participant-wise splitting | Completed |
-| LOLO evaluation splits | Next |
-| Window generation | Planned |
+| LOLO evaluation splits | Completed |
+| Window generation | Completed |
 | Model development | Planned |
 | Model evaluation | Planned |
 | ESP32 deployment | Planned |
