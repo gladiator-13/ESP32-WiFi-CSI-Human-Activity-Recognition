@@ -1,0 +1,121 @@
+model,actual_label,actual_activity,predicted_label,predicted_activity,misclassified_windows,percentage_of_actual_class
+Random Forest,A01,Standing,A11,Clap,16,12.030075187969924
+Random Forest,A01,Standing,A18,Writing notes,16,12.030075187969924
+Random Forest,A01,Standing,A10,Wave,12,9.022556390977442
+Random Forest,A02,Sitting,A01,Standing,30,26.31578947368421
+Random Forest,A02,Sitting,A16,Typing,17,14.912280701754385
+Random Forest,A02,Sitting,A15,Arm circles,9,7.894736842105263
+Random Forest,A03,Walk,A09,Lunges,18,15.789473684210526
+Random Forest,A03,Walk,A07,Jump in place,14,12.280701754385964
+Random Forest,A03,Walk,A05,Turn around,9,7.894736842105263
+Random Forest,A04,Jog in place,A07,Jump in place,22,19.298245614035086
+Random Forest,A04,Jog in place,A09,Lunges,8,7.017543859649122
+Random Forest,A04,Jog in place,A03,Walk,7,6.140350877192982
+Random Forest,A05,Turn around,A08,Bend and pick up,13,11.403508771929824
+Random Forest,A05,Turn around,A13,Arms up and down,12,10.526315789473683
+Random Forest,A05,Turn around,A17,Phone call,7,6.140350877192982
+Random Forest,A06,"Sit down, stand up",A04,Jog in place,19,14.285714285714285
+Random Forest,A06,"Sit down, stand up",A03,Walk,17,12.781954887218044
+Random Forest,A06,"Sit down, stand up",A12,Boxing,13,9.774436090225564
+Random Forest,A07,Jump in place,A09,Lunges,24,18.045112781954884
+Random Forest,A07,Jump in place,A04,Jog in place,23,17.293233082706767
+Random Forest,A07,Jump in place,A03,Walk,11,8.270676691729323
+Random Forest,A08,Bend and pick up,A03,Walk,14,12.280701754385964
+Random Forest,A08,Bend and pick up,A12,Boxing,14,12.280701754385964
+Random Forest,A08,Bend and pick up,A13,Arms up and down,13,11.403508771929824
+Random Forest,A09,Lunges,A07,Jump in place,21,18.421052631578945
+Random Forest,A09,Lunges,A06,"Sit down, stand up",16,14.035087719298245
+Random Forest,A09,Lunges,A08,Bend and pick up,12,10.526315789473683
+Random Forest,A10,Wave,A13,Arms up and down,23,20.175438596491226
+Random Forest,A10,Wave,A05,Turn around,10,8.771929824561402
+Random Forest,A10,Wave,A02,Sitting,8,7.017543859649122
+Random Forest,A11,Clap,A20,Combing hair,19,16.666666666666664
+Random Forest,A11,Clap,A13,Arms up and down,16,14.035087719298245
+Random Forest,A11,Clap,A15,Arm circles,16,14.035087719298245
+Random Forest,A12,Boxing,A04,Jog in place,18,15.789473684210526
+Random Forest,A12,Boxing,A20,Combing hair,18,15.789473684210526
+Random Forest,A12,Boxing,A08,Bend and pick up,16,14.035087719298245
+Random Forest,A13,Arms up and down,A14,Push forward,42,31.57894736842105
+Random Forest,A13,Arms up and down,A05,Turn around,12,9.022556390977442
+Random Forest,A13,Arms up and down,A03,Walk,11,8.270676691729323
+Random Forest,A14,Push forward,A09,Lunges,15,11.278195488721805
+Random Forest,A14,Push forward,A19,Reading a book,15,11.278195488721805
+Random Forest,A14,Push forward,A12,Boxing,13,9.774436090225564
+Random Forest,A15,Arm circles,A19,Reading a book,16,14.035087719298245
+Random Forest,A15,Arm circles,A04,Jog in place,14,12.280701754385964
+Random Forest,A15,Arm circles,A07,Jump in place,10,8.771929824561402
+Random Forest,A16,Typing,A15,Arm circles,18,15.789473684210526
+Random Forest,A16,Typing,A02,Sitting,16,14.035087719298245
+Random Forest,A16,Typing,A19,Reading a book,14,12.280701754385964
+Random Forest,A17,Phone call,A11,Clap,25,21.929824561403507
+Random Forest,A17,Phone call,A07,Jump in place,11,9.649122807017543
+Random Forest,A17,Phone call,A08,Bend and pick up,11,9.649122807017543
+Random Forest,A18,Writing notes,A16,Typing,22,19.298245614035086
+Random Forest,A18,Writing notes,A02,Sitting,16,14.035087719298245
+Random Forest,A18,Writing notes,A20,Combing hair,15,13.157894736842104
+Random Forest,A19,Reading a book,A01,Standing,25,21.929824561403507
+Random Forest,A19,Reading a book,A18,Writing notes,20,17.543859649122805
+Random Forest,A19,Reading a book,A02,Sitting,19,16.666666666666664
+Random Forest,A20,Combing hair,A10,Wave,22,19.298245614035086
+Random Forest,A20,Combing hair,A13,Arms up and down,15,13.157894736842104
+Random Forest,A20,Combing hair,A11,Clap,12,10.526315789473683
+SVM,A01,Standing,A19,Reading a book,25,18.796992481203006
+SVM,A01,Standing,A02,Sitting,14,10.526315789473683
+SVM,A01,Standing,A18,Writing notes,11,8.270676691729323
+SVM,A02,Sitting,A01,Standing,20,17.543859649122805
+SVM,A02,Sitting,A16,Typing,18,15.789473684210526
+SVM,A02,Sitting,A19,Reading a book,10,8.771929824561402
+SVM,A03,Walk,A07,Jump in place,14,12.280701754385964
+SVM,A03,Walk,A09,Lunges,14,12.280701754385964
+SVM,A03,Walk,A05,Turn around,10,8.771929824561402
+SVM,A04,Jog in place,A07,Jump in place,20,17.543859649122805
+SVM,A04,Jog in place,A12,Boxing,9,7.894736842105263
+SVM,A04,Jog in place,A13,Arms up and down,8,7.017543859649122
+SVM,A05,Turn around,A08,Bend and pick up,15,13.157894736842104
+SVM,A05,Turn around,A09,Lunges,9,7.894736842105263
+SVM,A05,Turn around,A12,Boxing,9,7.894736842105263
+SVM,A06,"Sit down, stand up",A04,Jog in place,18,13.533834586466165
+SVM,A06,"Sit down, stand up",A09,Lunges,15,11.278195488721805
+SVM,A06,"Sit down, stand up",A08,Bend and pick up,11,8.270676691729323
+SVM,A07,Jump in place,A04,Jog in place,26,19.548872180451127
+SVM,A07,Jump in place,A09,Lunges,18,13.533834586466165
+SVM,A07,Jump in place,A20,Combing hair,14,10.526315789473683
+SVM,A08,Bend and pick up,A13,Arms up and down,10,8.771929824561402
+SVM,A08,Bend and pick up,A03,Walk,9,7.894736842105263
+SVM,A08,Bend and pick up,A05,Turn around,9,7.894736842105263
+SVM,A09,Lunges,A06,"Sit down, stand up",25,21.929824561403507
+SVM,A09,Lunges,A03,Walk,11,9.649122807017543
+SVM,A09,Lunges,A07,Jump in place,9,7.894736842105263
+SVM,A10,Wave,A13,Arms up and down,16,14.035087719298245
+SVM,A10,Wave,A15,Arm circles,11,9.649122807017543
+SVM,A10,Wave,A08,Bend and pick up,10,8.771929824561402
+SVM,A11,Clap,A15,Arm circles,21,18.421052631578945
+SVM,A11,Clap,A20,Combing hair,16,14.035087719298245
+SVM,A11,Clap,A01,Standing,12,10.526315789473683
+SVM,A12,Boxing,A06,"Sit down, stand up",18,15.789473684210526
+SVM,A12,Boxing,A20,Combing hair,17,14.912280701754385
+SVM,A12,Boxing,A05,Turn around,12,10.526315789473683
+SVM,A13,Arms up and down,A14,Push forward,45,33.83458646616541
+SVM,A13,Arms up and down,A11,Clap,18,13.533834586466165
+SVM,A13,Arms up and down,A03,Walk,11,8.270676691729323
+SVM,A14,Push forward,A19,Reading a book,17,12.781954887218044
+SVM,A14,Push forward,A12,Boxing,16,12.030075187969924
+SVM,A14,Push forward,A09,Lunges,14,10.526315789473683
+SVM,A15,Arm circles,A19,Reading a book,14,12.280701754385964
+SVM,A15,Arm circles,A02,Sitting,10,8.771929824561402
+SVM,A15,Arm circles,A04,Jog in place,10,8.771929824561402
+SVM,A16,Typing,A19,Reading a book,31,27.192982456140353
+SVM,A16,Typing,A02,Sitting,18,15.789473684210526
+SVM,A16,Typing,A18,Writing notes,18,15.789473684210526
+SVM,A17,Phone call,A11,Clap,22,19.298245614035086
+SVM,A17,Phone call,A08,Bend and pick up,9,7.894736842105263
+SVM,A17,Phone call,A05,Turn around,8,7.017543859649122
+SVM,A18,Writing notes,A16,Typing,21,18.421052631578945
+SVM,A18,Writing notes,A02,Sitting,19,16.666666666666664
+SVM,A18,Writing notes,A20,Combing hair,15,13.157894736842104
+SVM,A19,Reading a book,A18,Writing notes,31,27.192982456140353
+SVM,A19,Reading a book,A02,Sitting,20,17.543859649122805
+SVM,A19,Reading a book,A11,Clap,16,14.035087719298245
+SVM,A20,Combing hair,A15,Arm circles,25,21.929824561403507
+SVM,A20,Combing hair,A10,Wave,21,18.421052631578945
+SVM,A20,Combing hair,A14,Push forward,12,10.526315789473683
