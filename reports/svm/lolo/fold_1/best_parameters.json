@@ -1,0 +1,17 @@
+{
+    "model": "SVC",
+    "fold": "fold_1",
+    "kernel": "rbf",
+    "random_state": 42,
+    "class_weight": null,
+    "best_parameters": {
+        "C": 10,
+        "gamma": 0.01
+    },
+    "best_validation_macro_f1": 0.1486075075209102,
+    "training_samples_after_refit": 7049,
+    "number_of_features": 468,
+    "number_of_classes": 20,
+    "scaler": "StandardScaler fitted within Pipeline",
+    "refit_time_seconds": 5.186887741088867
+}
