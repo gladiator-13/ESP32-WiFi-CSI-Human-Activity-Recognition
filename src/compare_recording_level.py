@@ -16,7 +16,10 @@ MODELS = {
     "random_forest": "Random Forest",
     "svm": "SVM",
     "cnn": "1D-CNN",
+    "cnn_bilstm_attention": "CNN-BiLSTM-Attention",
 }
+
+NUMBER_OF_FOLDS = 4
 
 METRICS = [
     "accuracy",
@@ -41,6 +44,7 @@ def save_csv(df, filename):
 
 
 def markdown_table(df, columns=None, digits=4):
+
     if columns is not None:
         df = df[columns]
 
@@ -52,6 +56,7 @@ def markdown_table(df, columns=None, digits=4):
 
     for _, row in df.iterrows():
         values = []
+
         for value in row:
             if pd.isna(value):
                 values.append("—")
@@ -59,6 +64,7 @@ def markdown_table(df, columns=None, digits=4):
                 values.append(f"{value:.{digits}f}")
             else:
                 values.append(str(value))
+
         rows.append(values)
 
     output = [
@@ -81,7 +87,11 @@ def prepare_recording_results():
     data["model_name"] = data["model"].map(MODELS)
 
     if data["model_name"].isna().any():
-        raise ValueError("Unknown model found in recording summary.")
+        unknown = data.loc[
+            data["model_name"].isna(), "model"
+        ].unique()
+
+        raise ValueError(f"Unknown models: {unknown}")
 
     within = data[
         data["evaluation"] == "within_location"
@@ -91,10 +101,52 @@ def prepare_recording_results():
         data["evaluation"] == "lolo"
     ].copy()
 
-    if len(within) != 3 or len(lolo) != 9:
+    expected_models = set(MODELS.keys())
+    expected_folds = set(range(1, NUMBER_OF_FOLDS + 1))
+
+    # Validate within-location evaluations.
+    if len(within) != len(MODELS):
         raise ValueError(
-            "Expected 3 within-location and 9 LOLO evaluations."
+            f"Expected {len(MODELS)} within-location evaluations, "
+            f"found {len(within)}."
         )
+
+    if set(within["model"]) != expected_models:
+        raise ValueError("Within-location model coverage is incomplete.")
+
+    if within["model"].duplicated().any():
+        raise ValueError("Duplicate within-location model evaluations.")
+
+    # Validate LOLO evaluations.
+    expected_lolo_count = len(MODELS) * NUMBER_OF_FOLDS
+
+    if len(lolo) != expected_lolo_count:
+        raise ValueError(
+            f"Expected {expected_lolo_count} LOLO evaluations, "
+            f"found {len(lolo)}."
+        )
+
+    lolo["fold"] = lolo["fold"].astype(int)
+
+    for model in MODELS:
+
+        model_folds = set(
+            lolo.loc[lolo["model"] == model, "fold"]
+        )
+
+        if model_folds != expected_folds:
+            raise ValueError(
+                f"Incomplete LOLO folds for {model}: {model_folds}"
+            )
+
+    if lolo.duplicated(["model", "fold"]).any():
+        raise ValueError("Duplicate model/fold LOLO evaluations.")
+
+    print("\nRecording-level validation: PASSED")
+    print(f"Within-location evaluations: {len(within)}")
+    print(f"LOLO evaluations: {len(lolo)}")
+    print(f"Models: {len(MODELS)}")
+    print(f"LOLO folds: {NUMBER_OF_FOLDS}")
 
     return data, within, lolo
 
@@ -118,7 +170,10 @@ def create_within_comparison(within):
         columns={"model_name": "model"}
     )
 
-    result = result.sort_values("macro_f1", ascending=False)
+    result = result.sort_values(
+        "macro_f1",
+        ascending=False,
+    )
 
     save_csv(
         result,
@@ -182,13 +237,10 @@ def create_lolo_summary(lolo):
         columns={"model_name": "model"}
     )
 
-    result["number_of_folds"] = 3
+    result["number_of_folds"] = NUMBER_OF_FOLDS
 
     result = result[
-        [
-            "model",
-            "number_of_folds",
-        ]
+        ["model", "number_of_folds"]
         + [
             f"{metric}_{stat}"
             for metric in METRICS
@@ -223,15 +275,35 @@ def create_window_vs_recording(within, lolo_summary):
 
     for model_slug, display_name in MODELS.items():
 
-        window_name = display_name
-
         w_within = window_within[
-            window_within["model"] == window_name
-        ].iloc[0]
+            window_within["model"] == display_name
+        ]
 
         r_within = within[
             within["model"] == model_slug
-        ].iloc[0]
+        ]
+
+        w_lolo = window_lolo[
+            window_lolo["model"] == display_name
+        ]
+
+        r_lolo = lolo_summary[
+            lolo_summary["model"] == display_name
+        ]
+
+        if any(
+            frame.empty
+            for frame in [w_within, r_within, w_lolo, r_lolo]
+        ):
+            raise ValueError(
+                f"Missing window-level or recording-level "
+                f"comparison data for {display_name}."
+            )
+
+        w_within = w_within.iloc[0]
+        r_within = r_within.iloc[0]
+        w_lolo = w_lolo.iloc[0]
+        r_lolo = r_lolo.iloc[0]
 
         for metric in METRICS:
 
@@ -248,14 +320,6 @@ def create_window_vs_recording(within, lolo_summary):
                     recording_value - window_value
                 ) * 100,
             })
-
-        w_lolo = window_lolo[
-            window_lolo["model"] == window_name
-        ].iloc[0]
-
-        r_lolo = lolo_summary[
-            lolo_summary["model"] == display_name
-        ].iloc[0]
 
         for metric in METRICS:
 
@@ -289,7 +353,7 @@ def create_per_class_comparison():
 
     for model, display_name in MODELS.items():
 
-        # Within-location per-class results
+        # Within-location per-class results.
         path = (
             RECORDING_DIR
             / "within_location"
@@ -314,8 +378,8 @@ def create_per_class_comparison():
                     "support": row["support"],
                 })
 
-        # LOLO per-class results
-        for fold in range(1, 4):
+        # LOLO per-class results.
+        for fold in range(1, NUMBER_OF_FOLDS + 1):
 
             path = (
                 RECORDING_DIR
@@ -344,12 +408,16 @@ def create_per_class_comparison():
 
     result = pd.DataFrame(records)
 
+    if result.empty:
+        raise ValueError("No per-class evaluation results were found.")
+
     save_csv(
         result,
         "recording_level_per_class_comparison.csv",
     )
 
     return result
+
 
 
 def generate_markdown(
@@ -372,7 +440,10 @@ def generate_markdown(
         "window predictions into recording-level predictions "
         "improves activity recognition performance.",
         "",
-        "Three models are evaluated: Random Forest, SVM, and 1D-CNN.",
+        "Four models are evaluated: Random Forest, SVM, 1D-CNN, "
+        "and CNN-BiLSTM-Attention.",
+        "",
+        "The dataset contains four recording locations.",
         "",
         "## 2. Recording-level methodology",
         "",
@@ -427,7 +498,7 @@ def generate_markdown(
         "",
         "## 5. LOLO mean and standard deviation",
         "",
-        "The mean is the unweighted average of the three held-out "
+        "The mean is the unweighted average of the four held-out "
         "location folds. Standard deviation is the sample standard "
         "deviation (ddof=1).",
         "",
@@ -476,26 +547,23 @@ def generate_markdown(
         "",
         "## 8. Interpretation",
         "",
-        "Recording-level majority voting improves within-location "
-        "macro-F1 for all three models compared with window-level "
-        "evaluation. The improvement is smaller or inconsistent "
-        "under LOLO evaluation.",
-        "",
-        "This suggests that aggregating multiple windows can reduce "
-        "some window-level prediction variability, but does not "
-        "remove the difficulty of generalizing to unseen locations.",
+        "Within-location and cross-location performance are reported "
+        "separately. Recording-level majority voting can reduce "
+        "some window-level prediction variability, but it does not "
+        "necessarily remove the difficulty of generalizing to "
+        "unseen locations.",
         "",
         "Location-specific differences should be interpreted "
-        "descriptively. Only three locations are available, so "
-        "these results do not establish a causal explanation for "
-        "the performance differences.",
+        "descriptively. Four locations are available, and the "
+        "observed differences do not establish a causal explanation "
+        "for performance variation.",
         "",
         "## 9. Limitations",
         "",
         "- The 50% overlapping windows are correlated observations.",
         "- Majority voting discards prediction confidence.",
         "- The deterministic tie-break can affect tied recordings.",
-        "- Only three locations are used for LOLO evaluation.",
+        "- Only four locations are used for LOLO evaluation.",
         "- Fold means are unweighted across locations.",
         "- No statistical significance claim is made.",
         "",

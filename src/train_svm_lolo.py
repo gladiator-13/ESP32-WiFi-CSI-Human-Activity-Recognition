@@ -457,7 +457,21 @@ def main():
 
     all_results = []
 
-    for fold in ["fold_1", "fold_2", "fold_3"]:
+    split_file = (
+        PROJECT_ROOT / "data" / "processed" / "splits" / "lolo_recording_splits.csv"
+    )
+
+    split_df = pd.read_csv(split_file)
+
+    folds = sorted(
+        [
+            f"fold_{int(str(value).replace('fold_', ''))}"
+            for value in split_df["fold"].dropna().unique()
+        ],
+        key=lambda x: int(x.replace("fold_", ""))
+    )
+
+    for fold in folds:
 
         result = run_fold(fold)
 

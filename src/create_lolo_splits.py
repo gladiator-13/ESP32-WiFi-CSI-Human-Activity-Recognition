@@ -72,9 +72,9 @@ def create_one_fold(metadata, test_location, fold_number, rng):
 
     locations = sorted(metadata["location"].unique())
 
-    if len(locations) != 3:
+    if len(locations) < 2:
         raise ValueError(
-            f"Expected exactly 3 locations, found {len(locations)}."
+            f"Expected at least 2 locations, found {len(locations)}."
         )
 
     train_locations = [
@@ -328,7 +328,7 @@ def main():
     )
 
     print("\n" + "=" * 55)
-    print("ALL THREE LOLO FOLDS COMPLETED SUCCESSFULLY!")
+    print(f"ALL {len(locations)} LOLO FOLDS COMPLETED SUCCESSFULLY!")
     print("=" * 55)
 
     print("\nSaved files:")

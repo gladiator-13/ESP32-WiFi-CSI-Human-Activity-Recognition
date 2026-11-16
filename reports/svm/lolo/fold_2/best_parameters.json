@@ -5,13 +5,13 @@
     "random_state": 42,
     "class_weight": null,
     "best_parameters": {
-        "C": 10,
+        "C": 1,
         "gamma": 0.001
     },
-    "best_validation_macro_f1": 0.2187885088482561,
-    "training_samples_after_refit": 7410,
+    "best_validation_macro_f1": 0.17283857577743908,
+    "training_samples_after_refit": 11058,
     "number_of_features": 468,
     "number_of_classes": 20,
     "scaler": "StandardScaler fitted within Pipeline",
-    "refit_time_seconds": 4.776908874511719
+    "refit_time_seconds": 13.853797912597656
 }

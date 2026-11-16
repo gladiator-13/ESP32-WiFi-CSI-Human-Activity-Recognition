@@ -174,12 +174,21 @@ def main():
     )
 
     # 2. LOLO: independent scaler for every fold
-    for fold in [1, 2, 3]:
+    lolo_folds = sorted(
+        [
+            path.name
+            for path in (WINDOWS_DIR / "lolo").glob("fold_*")
+            if path.is_dir()
+        ]
+    )
+
+    for fold_name in lolo_folds:
 
         normalize_dataset(
-            WINDOWS_DIR / "lolo" / f"fold_{fold}",
-            OUTPUT_DIR / "lolo" / f"fold_{fold}"
+            WINDOWS_DIR / "lolo" / fold_name,
+            OUTPUT_DIR / "lolo" / fold_name
         )
+
 
     print("\n" + "=" * 65)
     print("ALL NORMALIZATION TASKS COMPLETED!")

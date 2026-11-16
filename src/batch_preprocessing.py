@@ -28,12 +28,20 @@ def get_location(participant):
 
     if 0 <= participant_number <= 9:
         return "Location_1"
+
     elif 10 <= participant_number <= 18:
         return "Location_2"
+
     elif 19 <= participant_number <= 27:
         return "Location_3"
+
+    elif 28 <= participant_number <= 36:
+        return "Location_4"
+
     else:
-        return "Unknown"
+        raise ValueError(
+            f"Unknown participant: {participant}"
+        )
 
 
 # --------------------------------------------------

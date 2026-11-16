@@ -1,13 +1,13 @@
 {
-    "test_accuracy": 0.07328805885681947,
-    "test_macro_precision": 0.07651186875724907,
-    "test_macro_recall": 0.07208399787347156,
-    "test_macro_f1": 0.04614888450779821,
-    "test_weighted_f1": 0.04632938174809802,
+    "test_accuracy": 0.07413695529145445,
+    "test_macro_precision": 0.09365775368109433,
+    "test_macro_recall": 0.07416267942583732,
+    "test_macro_f1": 0.06892701232443163,
+    "test_weighted_f1": 0.06795426717505403,
     "model": "1D-CNN",
     "split": "lolo",
     "fold": 3,
     "held_out_location": "Location_3",
-    "best_epoch": 28,
-    "total_epochs": 43
+    "best_epoch": 35,
+    "total_epochs": 50
 }

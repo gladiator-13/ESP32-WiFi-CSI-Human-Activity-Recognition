@@ -1,2 +1,2 @@
-accuracy,macro_precision,macro_recall,macro_f1,test_samples,number_of_features,number_of_classes,weighted_f1
-0.21305263157894735,0.20834759910334863,0.2132832080200501,0.20754120645658097,2375,468,20,0.207424
+accuracy,macro_precision,macro_recall,macro_f1,test_samples,number_of_features,number_of_classes
+0.20175438596491227,0.19854878607334817,0.20464181286549707,0.19807130895519234,3192,468,20

@@ -1,0 +1,17 @@
+{
+    "model": "1D-CNN",
+    "input_shape": [
+        200,
+        52
+    ],
+    "num_classes": 20,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "maximum_epochs": 80,
+    "early_stopping_patience": 15,
+    "random_seed": 42,
+    "class_weights": null,
+    "model_selection_metric": "validation_macro_f1",
+    "test_evaluated": false
+}

@@ -1,0 +1,833 @@
+model,actual_id,actual_activity,predicted_id,predicted_activity,misclassified_windows,percentage_of_actual_class
+Random Forest,A13,Arms up and down,A14,Push forward,42,31.57894736842105
+Random Forest,A02,Sitting,A01,Standing,30,26.31578947368421
+Random Forest,A19,Reading a book,A01,Standing,25,21.929824561403507
+Random Forest,A17,Phone call,A11,Clap,25,21.929824561403507
+Random Forest,A07,Jump in place,A09,Lunges,24,18.045112781954884
+Random Forest,A07,Jump in place,A04,Jog in place,23,17.293233082706767
+Random Forest,A10,Wave,A13,Arms up and down,23,20.175438596491226
+Random Forest,A20,Combing hair,A10,Wave,22,19.298245614035086
+Random Forest,A18,Writing notes,A16,Typing,22,19.298245614035086
+Random Forest,A04,Jog in place,A07,Jump in place,22,19.298245614035086
+Random Forest,A09,Lunges,A07,Jump in place,21,18.421052631578945
+Random Forest,A19,Reading a book,A18,Writing notes,20,17.543859649122805
+Random Forest,A11,Clap,A20,Combing hair,19,16.666666666666664
+Random Forest,A06,"Sit down, stand up",A04,Jog in place,19,14.285714285714285
+Random Forest,A19,Reading a book,A02,Sitting,19,16.666666666666664
+Random Forest,A03,Walk,A09,Lunges,18,15.789473684210526
+Random Forest,A12,Boxing,A04,Jog in place,18,15.789473684210526
+Random Forest,A12,Boxing,A20,Combing hair,18,15.789473684210526
+Random Forest,A16,Typing,A15,Arm circles,18,15.789473684210526
+Random Forest,A06,"Sit down, stand up",A03,Walk,17,12.781954887218044
+Random Forest,A02,Sitting,A16,Typing,17,14.912280701754385
+Random Forest,A15,Arm circles,A19,Reading a book,16,14.035087719298245
+Random Forest,A18,Writing notes,A02,Sitting,16,14.035087719298245
+Random Forest,A01,Standing,A11,Clap,16,12.030075187969924
+Random Forest,A01,Standing,A18,Writing notes,16,12.030075187969924
+Random Forest,A11,Clap,A13,Arms up and down,16,14.035087719298245
+Random Forest,A11,Clap,A15,Arm circles,16,14.035087719298245
+Random Forest,A12,Boxing,A08,Bend and pick up,16,14.035087719298245
+Random Forest,A09,Lunges,A06,"Sit down, stand up",16,14.035087719298245
+Random Forest,A16,Typing,A02,Sitting,16,14.035087719298245
+Random Forest,A12,Boxing,A10,Wave,15,13.157894736842104
+Random Forest,A20,Combing hair,A13,Arms up and down,15,13.157894736842104
+Random Forest,A18,Writing notes,A20,Combing hair,15,13.157894736842104
+Random Forest,A14,Push forward,A19,Reading a book,15,11.278195488721805
+Random Forest,A14,Push forward,A09,Lunges,15,11.278195488721805
+Random Forest,A03,Walk,A07,Jump in place,14,12.280701754385964
+Random Forest,A15,Arm circles,A04,Jog in place,14,12.280701754385964
+Random Forest,A16,Typing,A19,Reading a book,14,12.280701754385964
+Random Forest,A08,Bend and pick up,A03,Walk,14,12.280701754385964
+Random Forest,A08,Bend and pick up,A12,Boxing,14,12.280701754385964
+Random Forest,A14,Push forward,A12,Boxing,13,9.774436090225564
+Random Forest,A11,Clap,A10,Wave,13,11.403508771929824
+Random Forest,A08,Bend and pick up,A13,Arms up and down,13,11.403508771929824
+Random Forest,A16,Typing,A01,Standing,13,11.403508771929824
+Random Forest,A06,"Sit down, stand up",A12,Boxing,13,9.774436090225564
+Random Forest,A05,Turn around,A08,Bend and pick up,13,11.403508771929824
+Random Forest,A14,Push forward,A13,Arms up and down,13,9.774436090225564
+Random Forest,A20,Combing hair,A11,Clap,12,10.526315789473683
+Random Forest,A13,Arms up and down,A05,Turn around,12,9.022556390977442
+Random Forest,A09,Lunges,A08,Bend and pick up,12,10.526315789473683
+Random Forest,A05,Turn around,A13,Arms up and down,12,10.526315789473683
+Random Forest,A06,"Sit down, stand up",A09,Lunges,12,9.022556390977442
+Random Forest,A08,Bend and pick up,A06,"Sit down, stand up",12,10.526315789473683
+Random Forest,A01,Standing,A10,Wave,12,9.022556390977442
+Random Forest,A20,Combing hair,A15,Arm circles,11,9.649122807017543
+Random Forest,A16,Typing,A18,Writing notes,11,9.649122807017543
+Random Forest,A17,Phone call,A08,Bend and pick up,11,9.649122807017543
+Random Forest,A13,Arms up and down,A03,Walk,11,8.270676691729323
+Random Forest,A20,Combing hair,A07,Jump in place,11,9.649122807017543
+Random Forest,A07,Jump in place,A03,Walk,11,8.270676691729323
+Random Forest,A19,Reading a book,A11,Clap,11,9.649122807017543
+Random Forest,A17,Phone call,A07,Jump in place,11,9.649122807017543
+Random Forest,A14,Push forward,A04,Jog in place,10,7.518796992481203
+Random Forest,A13,Arms up and down,A07,Jump in place,10,7.518796992481203
+Random Forest,A11,Clap,A01,Standing,10,8.771929824561402
+Random Forest,A15,Arm circles,A07,Jump in place,10,8.771929824561402
+Random Forest,A10,Wave,A05,Turn around,10,8.771929824561402
+Random Forest,A13,Arms up and down,A11,Clap,10,7.518796992481203
+Random Forest,A03,Walk,A05,Turn around,9,7.894736842105263
+Random Forest,A15,Arm circles,A10,Wave,9,7.894736842105263
+Random Forest,A17,Phone call,A20,Combing hair,9,7.894736842105263
+Random Forest,A02,Sitting,A15,Arm circles,9,7.894736842105263
+Random Forest,A18,Writing notes,A01,Standing,9,7.894736842105263
+Random Forest,A01,Standing,A02,Sitting,9,6.7669172932330826
+Random Forest,A14,Push forward,A15,Arm circles,9,6.7669172932330826
+Random Forest,A14,Push forward,A03,Walk,8,6.015037593984962
+Random Forest,A08,Bend and pick up,A15,Arm circles,8,7.017543859649122
+Random Forest,A02,Sitting,A12,Boxing,8,7.017543859649122
+Random Forest,A10,Wave,A02,Sitting,8,7.017543859649122
+Random Forest,A14,Push forward,A17,Phone call,8,6.015037593984962
+Random Forest,A10,Wave,A12,Boxing,8,7.017543859649122
+Random Forest,A10,Wave,A08,Bend and pick up,8,7.017543859649122
+Random Forest,A02,Sitting,A18,Writing notes,8,7.017543859649122
+Random Forest,A06,"Sit down, stand up",A08,Bend and pick up,8,6.015037593984962
+Random Forest,A04,Jog in place,A09,Lunges,8,7.017543859649122
+Random Forest,A13,Arms up and down,A15,Arm circles,8,6.015037593984962
+Random Forest,A06,"Sit down, stand up",A07,Jump in place,7,5.263157894736842
+Random Forest,A04,Jog in place,A03,Walk,7,6.140350877192982
+Random Forest,A01,Standing,A14,Push forward,7,5.263157894736842
+Random Forest,A13,Arms up and down,A01,Standing,7,5.263157894736842
+Random Forest,A02,Sitting,A10,Wave,7,6.140350877192982
+Random Forest,A12,Boxing,A13,Arms up and down,7,6.140350877192982
+Random Forest,A12,Boxing,A06,"Sit down, stand up",7,6.140350877192982
+Random Forest,A15,Arm circles,A20,Combing hair,7,6.140350877192982
+Random Forest,A05,Turn around,A17,Phone call,7,6.140350877192982
+Random Forest,A07,Jump in place,A13,Arms up and down,7,5.263157894736842
+Random Forest,A15,Arm circles,A01,Standing,7,6.140350877192982
+Random Forest,A07,Jump in place,A14,Push forward,7,5.263157894736842
+Random Forest,A12,Boxing,A05,Turn around,7,6.140350877192982
+Random Forest,A10,Wave,A07,Jump in place,7,6.140350877192982
+Random Forest,A13,Arms up and down,A04,Jog in place,7,5.263157894736842
+Random Forest,A04,Jog in place,A13,Arms up and down,7,6.140350877192982
+Random Forest,A17,Phone call,A09,Lunges,7,6.140350877192982
+Random Forest,A01,Standing,A13,Arms up and down,6,4.511278195488721
+Random Forest,A19,Reading a book,A16,Typing,6,5.263157894736842
+Random Forest,A17,Phone call,A04,Jog in place,6,5.263157894736842
+Random Forest,A05,Turn around,A14,Push forward,6,5.263157894736842
+Random Forest,A05,Turn around,A12,Boxing,6,5.263157894736842
+Random Forest,A16,Typing,A20,Combing hair,6,5.263157894736842
+Random Forest,A09,Lunges,A03,Walk,6,5.263157894736842
+Random Forest,A01,Standing,A20,Combing hair,6,4.511278195488721
+Random Forest,A12,Boxing,A14,Push forward,6,5.263157894736842
+Random Forest,A11,Clap,A04,Jog in place,6,5.263157894736842
+Random Forest,A20,Combing hair,A14,Push forward,6,5.263157894736842
+Random Forest,A17,Phone call,A13,Arms up and down,6,5.263157894736842
+Random Forest,A18,Writing notes,A19,Reading a book,6,5.263157894736842
+Random Forest,A03,Walk,A06,"Sit down, stand up",6,5.263157894736842
+Random Forest,A20,Combing hair,A01,Standing,5,4.385964912280701
+Random Forest,A08,Bend and pick up,A17,Phone call,5,4.385964912280701
+Random Forest,A01,Standing,A16,Typing,5,3.7593984962406015
+Random Forest,A01,Standing,A15,Arm circles,5,3.7593984962406015
+Random Forest,A07,Jump in place,A01,Standing,5,3.7593984962406015
+Random Forest,A10,Wave,A15,Arm circles,5,4.385964912280701
+Random Forest,A17,Phone call,A15,Arm circles,5,4.385964912280701
+Random Forest,A18,Writing notes,A10,Wave,5,4.385964912280701
+Random Forest,A03,Walk,A04,Jog in place,5,4.385964912280701
+Random Forest,A20,Combing hair,A17,Phone call,5,4.385964912280701
+Random Forest,A18,Writing notes,A06,"Sit down, stand up",5,4.385964912280701
+Random Forest,A05,Turn around,A09,Lunges,5,4.385964912280701
+Random Forest,A06,"Sit down, stand up",A05,Turn around,5,3.7593984962406015
+Random Forest,A08,Bend and pick up,A09,Lunges,5,4.385964912280701
+Random Forest,A15,Arm circles,A02,Sitting,5,4.385964912280701
+Random Forest,A15,Arm circles,A14,Push forward,5,4.385964912280701
+Random Forest,A15,Arm circles,A16,Typing,5,4.385964912280701
+Random Forest,A08,Bend and pick up,A11,Clap,5,4.385964912280701
+Random Forest,A04,Jog in place,A12,Boxing,5,4.385964912280701
+Random Forest,A06,"Sit down, stand up",A01,Standing,5,3.7593984962406015
+Random Forest,A10,Wave,A03,Walk,5,4.385964912280701
+Random Forest,A07,Jump in place,A15,Arm circles,5,3.7593984962406015
+Random Forest,A10,Wave,A11,Clap,5,4.385964912280701
+Random Forest,A20,Combing hair,A16,Typing,4,3.508771929824561
+Random Forest,A05,Turn around,A04,Jog in place,4,3.508771929824561
+Random Forest,A17,Phone call,A14,Push forward,4,3.508771929824561
+Random Forest,A17,Phone call,A16,Typing,4,3.508771929824561
+Random Forest,A18,Writing notes,A12,Boxing,4,3.508771929824561
+Random Forest,A01,Standing,A07,Jump in place,4,3.007518796992481
+Random Forest,A04,Jog in place,A15,Arm circles,4,3.508771929824561
+Random Forest,A07,Jump in place,A12,Boxing,4,3.007518796992481
+Random Forest,A17,Phone call,A05,Turn around,4,3.508771929824561
+Random Forest,A15,Arm circles,A06,"Sit down, stand up",4,3.508771929824561
+Random Forest,A14,Push forward,A20,Combing hair,4,3.007518796992481
+Random Forest,A15,Arm circles,A13,Arms up and down,4,3.508771929824561
+Random Forest,A07,Jump in place,A20,Combing hair,4,3.007518796992481
+Random Forest,A11,Clap,A19,Reading a book,4,3.508771929824561
+Random Forest,A13,Arms up and down,A12,Boxing,4,3.007518796992481
+Random Forest,A13,Arms up and down,A08,Bend and pick up,4,3.007518796992481
+Random Forest,A13,Arms up and down,A09,Lunges,4,3.007518796992481
+Random Forest,A08,Bend and pick up,A16,Typing,4,3.508771929824561
+Random Forest,A10,Wave,A06,"Sit down, stand up",4,3.508771929824561
+Random Forest,A10,Wave,A19,Reading a book,4,3.508771929824561
+Random Forest,A14,Push forward,A08,Bend and pick up,4,3.007518796992481
+Random Forest,A13,Arms up and down,A17,Phone call,4,3.007518796992481
+Random Forest,A12,Boxing,A17,Phone call,4,3.508771929824561
+Random Forest,A02,Sitting,A17,Phone call,4,3.508771929824561
+Random Forest,A01,Standing,A19,Reading a book,4,3.007518796992481
+Random Forest,A02,Sitting,A11,Clap,3,2.631578947368421
+Random Forest,A12,Boxing,A19,Reading a book,3,2.631578947368421
+Random Forest,A11,Clap,A09,Lunges,3,2.631578947368421
+Random Forest,A12,Boxing,A16,Typing,3,2.631578947368421
+Random Forest,A20,Combing hair,A12,Boxing,3,2.631578947368421
+Random Forest,A14,Push forward,A06,"Sit down, stand up",3,2.2556390977443606
+Random Forest,A08,Bend and pick up,A14,Push forward,3,2.631578947368421
+Random Forest,A10,Wave,A18,Writing notes,3,2.631578947368421
+Random Forest,A10,Wave,A14,Push forward,3,2.631578947368421
+Random Forest,A14,Push forward,A16,Typing,3,2.2556390977443606
+Random Forest,A08,Bend and pick up,A07,Jump in place,3,2.631578947368421
+Random Forest,A08,Bend and pick up,A05,Turn around,3,2.631578947368421
+Random Forest,A09,Lunges,A04,Jog in place,3,2.631578947368421
+Random Forest,A15,Arm circles,A17,Phone call,3,2.631578947368421
+Random Forest,A08,Bend and pick up,A04,Jog in place,3,2.631578947368421
+Random Forest,A19,Reading a book,A15,Arm circles,3,2.631578947368421
+Random Forest,A19,Reading a book,A07,Jump in place,3,2.631578947368421
+Random Forest,A05,Turn around,A06,"Sit down, stand up",3,2.631578947368421
+Random Forest,A17,Phone call,A01,Standing,3,2.631578947368421
+Random Forest,A17,Phone call,A10,Wave,3,2.631578947368421
+Random Forest,A07,Jump in place,A10,Wave,3,2.2556390977443606
+Random Forest,A07,Jump in place,A06,"Sit down, stand up",3,2.2556390977443606
+Random Forest,A07,Jump in place,A08,Bend and pick up,3,2.2556390977443606
+Random Forest,A16,Typing,A08,Bend and pick up,3,2.631578947368421
+Random Forest,A15,Arm circles,A18,Writing notes,3,2.631578947368421
+Random Forest,A03,Walk,A08,Bend and pick up,3,2.631578947368421
+Random Forest,A05,Turn around,A07,Jump in place,3,2.631578947368421
+Random Forest,A18,Writing notes,A04,Jog in place,3,2.631578947368421
+Random Forest,A18,Writing notes,A09,Lunges,3,2.631578947368421
+Random Forest,A01,Standing,A09,Lunges,3,2.2556390977443606
+Random Forest,A15,Arm circles,A11,Clap,2,1.7543859649122806
+Random Forest,A15,Arm circles,A08,Bend and pick up,2,1.7543859649122806
+Random Forest,A11,Clap,A14,Push forward,2,1.7543859649122806
+Random Forest,A20,Combing hair,A05,Turn around,2,1.7543859649122806
+Random Forest,A20,Combing hair,A08,Bend and pick up,2,1.7543859649122806
+Random Forest,A09,Lunges,A01,Standing,2,1.7543859649122806
+Random Forest,A10,Wave,A17,Phone call,2,1.7543859649122806
+Random Forest,A10,Wave,A16,Typing,2,1.7543859649122806
+Random Forest,A10,Wave,A04,Jog in place,2,1.7543859649122806
+Random Forest,A12,Boxing,A03,Walk,2,1.7543859649122806
+Random Forest,A04,Jog in place,A20,Combing hair,2,1.7543859649122806
+Random Forest,A06,"Sit down, stand up",A19,Reading a book,2,1.5037593984962405
+Random Forest,A08,Bend and pick up,A10,Wave,2,1.7543859649122806
+Random Forest,A15,Arm circles,A12,Boxing,2,1.7543859649122806
+Random Forest,A07,Jump in place,A17,Phone call,2,1.5037593984962405
+Random Forest,A15,Arm circles,A03,Walk,2,1.7543859649122806
+Random Forest,A09,Lunges,A19,Reading a book,2,1.7543859649122806
+Random Forest,A12,Boxing,A09,Lunges,2,1.7543859649122806
+Random Forest,A12,Boxing,A07,Jump in place,2,1.7543859649122806
+Random Forest,A11,Clap,A05,Turn around,2,1.7543859649122806
+Random Forest,A11,Clap,A07,Jump in place,2,1.7543859649122806
+Random Forest,A11,Clap,A03,Walk,2,1.7543859649122806
+Random Forest,A12,Boxing,A18,Writing notes,2,1.7543859649122806
+Random Forest,A02,Sitting,A04,Jog in place,2,1.7543859649122806
+Random Forest,A20,Combing hair,A04,Jog in place,2,1.7543859649122806
+Random Forest,A20,Combing hair,A02,Sitting,2,1.7543859649122806
+Random Forest,A19,Reading a book,A20,Combing hair,2,1.7543859649122806
+Random Forest,A01,Standing,A08,Bend and pick up,2,1.5037593984962405
+Random Forest,A05,Turn around,A10,Wave,2,1.7543859649122806
+Random Forest,A17,Phone call,A12,Boxing,2,1.7543859649122806
+Random Forest,A04,Jog in place,A06,"Sit down, stand up",2,1.7543859649122806
+Random Forest,A19,Reading a book,A10,Wave,2,1.7543859649122806
+Random Forest,A01,Standing,A12,Boxing,2,1.5037593984962405
+Random Forest,A19,Reading a book,A05,Turn around,2,1.7543859649122806
+Random Forest,A03,Walk,A13,Arms up and down,2,1.7543859649122806
+Random Forest,A07,Jump in place,A05,Turn around,2,1.5037593984962405
+Random Forest,A16,Typing,A11,Clap,2,1.7543859649122806
+Random Forest,A17,Phone call,A06,"Sit down, stand up",2,1.7543859649122806
+Random Forest,A04,Jog in place,A08,Bend and pick up,2,1.7543859649122806
+Random Forest,A16,Typing,A14,Push forward,2,1.7543859649122806
+Random Forest,A05,Turn around,A20,Combing hair,2,1.7543859649122806
+Random Forest,A06,"Sit down, stand up",A14,Push forward,2,1.5037593984962405
+Random Forest,A05,Turn around,A11,Clap,2,1.7543859649122806
+Random Forest,A03,Walk,A01,Standing,2,1.7543859649122806
+Random Forest,A16,Typing,A10,Wave,2,1.7543859649122806
+Random Forest,A19,Reading a book,A17,Phone call,1,0.8771929824561403
+Random Forest,A10,Wave,A01,Standing,1,0.8771929824561403
+Random Forest,A14,Push forward,A07,Jump in place,1,0.7518796992481203
+Random Forest,A14,Push forward,A05,Turn around,1,0.7518796992481203
+Random Forest,A08,Bend and pick up,A20,Combing hair,1,0.8771929824561403
+Random Forest,A08,Bend and pick up,A19,Reading a book,1,0.8771929824561403
+Random Forest,A10,Wave,A20,Combing hair,1,0.8771929824561403
+Random Forest,A02,Sitting,A08,Bend and pick up,1,0.8771929824561403
+Random Forest,A02,Sitting,A14,Push forward,1,0.8771929824561403
+Random Forest,A02,Sitting,A19,Reading a book,1,0.8771929824561403
+Random Forest,A12,Boxing,A15,Arm circles,1,0.8771929824561403
+Random Forest,A20,Combing hair,A06,"Sit down, stand up",1,0.8771929824561403
+Random Forest,A11,Clap,A06,"Sit down, stand up",1,0.8771929824561403
+Random Forest,A11,Clap,A08,Bend and pick up,1,0.8771929824561403
+Random Forest,A08,Bend and pick up,A01,Standing,1,0.8771929824561403
+Random Forest,A14,Push forward,A10,Wave,1,0.7518796992481203
+Random Forest,A09,Lunges,A12,Boxing,1,0.8771929824561403
+Random Forest,A04,Jog in place,A14,Push forward,1,0.8771929824561403
+Random Forest,A06,"Sit down, stand up",A10,Wave,1,0.7518796992481203
+Random Forest,A06,"Sit down, stand up",A02,Sitting,1,0.7518796992481203
+Random Forest,A04,Jog in place,A10,Wave,1,0.8771929824561403
+Random Forest,A16,Typing,A17,Phone call,1,0.8771929824561403
+Random Forest,A16,Typing,A05,Turn around,1,0.8771929824561403
+Random Forest,A06,"Sit down, stand up",A15,Arm circles,1,0.7518796992481203
+Random Forest,A16,Typing,A06,"Sit down, stand up",1,0.8771929824561403
+Random Forest,A16,Typing,A07,Jump in place,1,0.8771929824561403
+Random Forest,A06,"Sit down, stand up",A18,Writing notes,1,0.7518796992481203
+Random Forest,A06,"Sit down, stand up",A11,Clap,1,0.7518796992481203
+Random Forest,A05,Turn around,A15,Arm circles,1,0.8771929824561403
+Random Forest,A07,Jump in place,A11,Clap,1,0.7518796992481203
+Random Forest,A05,Turn around,A01,Standing,1,0.8771929824561403
+Random Forest,A03,Walk,A17,Phone call,1,0.8771929824561403
+Random Forest,A03,Walk,A15,Arm circles,1,0.8771929824561403
+Random Forest,A03,Walk,A16,Typing,1,0.8771929824561403
+Random Forest,A18,Writing notes,A07,Jump in place,1,0.8771929824561403
+Random Forest,A05,Turn around,A03,Walk,1,0.8771929824561403
+Random Forest,A18,Writing notes,A08,Bend and pick up,1,0.8771929824561403
+Random Forest,A02,Sitting,A20,Combing hair,1,0.8771929824561403
+Random Forest,A19,Reading a book,A06,"Sit down, stand up",1,0.8771929824561403
+Random Forest,A18,Writing notes,A17,Phone call,1,0.8771929824561403
+Random Forest,A18,Writing notes,A14,Push forward,1,0.8771929824561403
+Random Forest,A18,Writing notes,A15,Arm circles,1,0.8771929824561403
+Random Forest,A04,Jog in place,A02,Sitting,1,0.8771929824561403
+Random Forest,A19,Reading a book,A08,Bend and pick up,1,0.8771929824561403
+Random Forest,A19,Reading a book,A12,Boxing,1,0.8771929824561403
+Random Forest,A20,Combing hair,A19,Reading a book,1,0.8771929824561403
+SVM,A13,Arms up and down,A14,Push forward,45,33.83458646616541
+SVM,A16,Typing,A19,Reading a book,31,27.192982456140353
+SVM,A19,Reading a book,A18,Writing notes,31,27.192982456140353
+SVM,A07,Jump in place,A04,Jog in place,26,19.548872180451127
+SVM,A20,Combing hair,A15,Arm circles,25,21.929824561403507
+SVM,A09,Lunges,A06,"Sit down, stand up",25,21.929824561403507
+SVM,A01,Standing,A19,Reading a book,25,18.796992481203006
+SVM,A17,Phone call,A11,Clap,22,19.298245614035086
+SVM,A18,Writing notes,A16,Typing,21,18.421052631578945
+SVM,A11,Clap,A15,Arm circles,21,18.421052631578945
+SVM,A20,Combing hair,A10,Wave,21,18.421052631578945
+SVM,A02,Sitting,A01,Standing,20,17.543859649122805
+SVM,A04,Jog in place,A07,Jump in place,20,17.543859649122805
+SVM,A19,Reading a book,A02,Sitting,20,17.543859649122805
+SVM,A18,Writing notes,A02,Sitting,19,16.666666666666664
+SVM,A06,"Sit down, stand up",A04,Jog in place,18,13.533834586466165
+SVM,A16,Typing,A02,Sitting,18,15.789473684210526
+SVM,A16,Typing,A18,Writing notes,18,15.789473684210526
+SVM,A02,Sitting,A16,Typing,18,15.789473684210526
+SVM,A07,Jump in place,A09,Lunges,18,13.533834586466165
+SVM,A13,Arms up and down,A11,Clap,18,13.533834586466165
+SVM,A12,Boxing,A06,"Sit down, stand up",18,15.789473684210526
+SVM,A12,Boxing,A20,Combing hair,17,14.912280701754385
+SVM,A14,Push forward,A19,Reading a book,17,12.781954887218044
+SVM,A19,Reading a book,A11,Clap,16,14.035087719298245
+SVM,A10,Wave,A13,Arms up and down,16,14.035087719298245
+SVM,A11,Clap,A20,Combing hair,16,14.035087719298245
+SVM,A14,Push forward,A12,Boxing,16,12.030075187969924
+SVM,A05,Turn around,A08,Bend and pick up,15,13.157894736842104
+SVM,A16,Typing,A15,Arm circles,15,13.157894736842104
+SVM,A18,Writing notes,A20,Combing hair,15,13.157894736842104
+SVM,A06,"Sit down, stand up",A09,Lunges,15,11.278195488721805
+SVM,A01,Standing,A02,Sitting,14,10.526315789473683
+SVM,A07,Jump in place,A20,Combing hair,14,10.526315789473683
+SVM,A03,Walk,A07,Jump in place,14,12.280701754385964
+SVM,A15,Arm circles,A19,Reading a book,14,12.280701754385964
+SVM,A14,Push forward,A09,Lunges,14,10.526315789473683
+SVM,A03,Walk,A09,Lunges,14,12.280701754385964
+SVM,A12,Boxing,A05,Turn around,12,10.526315789473683
+SVM,A20,Combing hair,A14,Push forward,12,10.526315789473683
+SVM,A07,Jump in place,A15,Arm circles,12,9.022556390977442
+SVM,A12,Boxing,A08,Bend and pick up,12,10.526315789473683
+SVM,A11,Clap,A01,Standing,12,10.526315789473683
+SVM,A10,Wave,A15,Arm circles,11,9.649122807017543
+SVM,A01,Standing,A18,Writing notes,11,8.270676691729323
+SVM,A09,Lunges,A03,Walk,11,9.649122807017543
+SVM,A13,Arms up and down,A03,Walk,11,8.270676691729323
+SVM,A18,Writing notes,A19,Reading a book,11,9.649122807017543
+SVM,A14,Push forward,A17,Phone call,11,8.270676691729323
+SVM,A12,Boxing,A04,Jog in place,11,9.649122807017543
+SVM,A06,"Sit down, stand up",A08,Bend and pick up,11,8.270676691729323
+SVM,A11,Clap,A10,Wave,10,8.771929824561402
+SVM,A10,Wave,A11,Clap,10,8.771929824561402
+SVM,A13,Arms up and down,A08,Bend and pick up,10,7.518796992481203
+SVM,A10,Wave,A08,Bend and pick up,10,8.771929824561402
+SVM,A15,Arm circles,A02,Sitting,10,8.771929824561402
+SVM,A08,Bend and pick up,A13,Arms up and down,10,8.771929824561402
+SVM,A15,Arm circles,A04,Jog in place,10,8.771929824561402
+SVM,A15,Arm circles,A16,Typing,10,8.771929824561402
+SVM,A06,"Sit down, stand up",A12,Boxing,10,7.518796992481203
+SVM,A02,Sitting,A19,Reading a book,10,8.771929824561402
+SVM,A19,Reading a book,A01,Standing,10,8.771929824561402
+SVM,A03,Walk,A05,Turn around,10,8.771929824561402
+SVM,A10,Wave,A05,Turn around,9,7.894736842105263
+SVM,A01,Standing,A14,Push forward,9,6.7669172932330826
+SVM,A20,Combing hair,A13,Arms up and down,9,7.894736842105263
+SVM,A09,Lunges,A08,Bend and pick up,9,7.894736842105263
+SVM,A09,Lunges,A07,Jump in place,9,7.894736842105263
+SVM,A10,Wave,A12,Boxing,9,7.894736842105263
+SVM,A08,Bend and pick up,A03,Walk,9,7.894736842105263
+SVM,A08,Bend and pick up,A05,Turn around,9,7.894736842105263
+SVM,A12,Boxing,A14,Push forward,9,7.894736842105263
+SVM,A08,Bend and pick up,A06,"Sit down, stand up",9,7.894736842105263
+SVM,A13,Arms up and down,A01,Standing,9,6.7669172932330826
+SVM,A08,Bend and pick up,A20,Combing hair,9,7.894736842105263
+SVM,A05,Turn around,A12,Boxing,9,7.894736842105263
+SVM,A06,"Sit down, stand up",A05,Turn around,9,6.7669172932330826
+SVM,A05,Turn around,A13,Arms up and down,9,7.894736842105263
+SVM,A13,Arms up and down,A15,Arm circles,9,6.7669172932330826
+SVM,A03,Walk,A06,"Sit down, stand up",9,7.894736842105263
+SVM,A17,Phone call,A08,Bend and pick up,9,7.894736842105263
+SVM,A04,Jog in place,A12,Boxing,9,7.894736842105263
+SVM,A05,Turn around,A09,Lunges,9,7.894736842105263
+SVM,A17,Phone call,A05,Turn around,8,7.017543859649122
+SVM,A17,Phone call,A15,Arm circles,8,7.017543859649122
+SVM,A04,Jog in place,A13,Arms up and down,8,7.017543859649122
+SVM,A14,Push forward,A13,Arms up and down,8,6.015037593984962
+SVM,A20,Combing hair,A02,Sitting,8,7.017543859649122
+SVM,A06,"Sit down, stand up",A03,Walk,8,6.015037593984962
+SVM,A15,Arm circles,A01,Standing,8,7.017543859649122
+SVM,A02,Sitting,A20,Combing hair,8,7.017543859649122
+SVM,A13,Arms up and down,A07,Jump in place,8,6.015037593984962
+SVM,A06,"Sit down, stand up",A01,Standing,8,6.015037593984962
+SVM,A01,Standing,A13,Arms up and down,8,6.015037593984962
+SVM,A08,Bend and pick up,A17,Phone call,8,7.017543859649122
+SVM,A20,Combing hair,A07,Jump in place,8,7.017543859649122
+SVM,A19,Reading a book,A16,Typing,7,6.140350877192982
+SVM,A08,Bend and pick up,A12,Boxing,7,6.140350877192982
+SVM,A08,Bend and pick up,A04,Jog in place,7,6.140350877192982
+SVM,A05,Turn around,A17,Phone call,7,6.140350877192982
+SVM,A07,Jump in place,A03,Walk,7,5.263157894736842
+SVM,A07,Jump in place,A19,Reading a book,7,5.263157894736842
+SVM,A12,Boxing,A10,Wave,7,6.140350877192982
+SVM,A10,Wave,A07,Jump in place,7,6.140350877192982
+SVM,A11,Clap,A19,Reading a book,7,6.140350877192982
+SVM,A02,Sitting,A10,Wave,7,6.140350877192982
+SVM,A06,"Sit down, stand up",A17,Phone call,7,5.263157894736842
+SVM,A16,Typing,A01,Standing,7,6.140350877192982
+SVM,A15,Arm circles,A12,Boxing,7,6.140350877192982
+SVM,A04,Jog in place,A15,Arm circles,7,6.140350877192982
+SVM,A17,Phone call,A20,Combing hair,7,6.140350877192982
+SVM,A01,Standing,A20,Combing hair,7,5.263157894736842
+SVM,A10,Wave,A19,Reading a book,7,6.140350877192982
+SVM,A10,Wave,A02,Sitting,7,6.140350877192982
+SVM,A11,Clap,A14,Push forward,7,6.140350877192982
+SVM,A15,Arm circles,A07,Jump in place,6,5.263157894736842
+SVM,A15,Arm circles,A18,Writing notes,6,5.263157894736842
+SVM,A17,Phone call,A16,Typing,6,5.263157894736842
+SVM,A17,Phone call,A09,Lunges,6,5.263157894736842
+SVM,A03,Walk,A04,Jog in place,6,5.263157894736842
+SVM,A20,Combing hair,A01,Standing,6,5.263157894736842
+SVM,A15,Arm circles,A17,Phone call,6,5.263157894736842
+SVM,A02,Sitting,A17,Phone call,6,5.263157894736842
+SVM,A18,Writing notes,A04,Jog in place,6,5.263157894736842
+SVM,A18,Writing notes,A10,Wave,6,5.263157894736842
+SVM,A08,Bend and pick up,A15,Arm circles,6,5.263157894736842
+SVM,A11,Clap,A13,Arms up and down,6,5.263157894736842
+SVM,A01,Standing,A15,Arm circles,5,3.7593984962406015
+SVM,A01,Standing,A11,Clap,5,3.7593984962406015
+SVM,A09,Lunges,A04,Jog in place,5,4.385964912280701
+SVM,A09,Lunges,A19,Reading a book,5,4.385964912280701
+SVM,A20,Combing hair,A17,Phone call,5,4.385964912280701
+SVM,A04,Jog in place,A20,Combing hair,5,4.385964912280701
+SVM,A17,Phone call,A04,Jog in place,5,4.385964912280701
+SVM,A17,Phone call,A19,Reading a book,5,4.385964912280701
+SVM,A05,Turn around,A14,Push forward,5,4.385964912280701
+SVM,A04,Jog in place,A09,Lunges,5,4.385964912280701
+SVM,A14,Push forward,A03,Walk,5,3.7593984962406015
+SVM,A14,Push forward,A06,"Sit down, stand up",5,3.7593984962406015
+SVM,A14,Push forward,A07,Jump in place,5,3.7593984962406015
+SVM,A07,Jump in place,A05,Turn around,5,3.7593984962406015
+SVM,A07,Jump in place,A12,Boxing,5,3.7593984962406015
+SVM,A07,Jump in place,A14,Push forward,5,3.7593984962406015
+SVM,A02,Sitting,A18,Writing notes,5,4.385964912280701
+SVM,A02,Sitting,A15,Arm circles,5,4.385964912280701
+SVM,A15,Arm circles,A10,Wave,5,4.385964912280701
+SVM,A15,Arm circles,A14,Push forward,5,4.385964912280701
+SVM,A05,Turn around,A06,"Sit down, stand up",5,4.385964912280701
+SVM,A12,Boxing,A16,Typing,5,4.385964912280701
+SVM,A14,Push forward,A15,Arm circles,5,3.7593984962406015
+SVM,A10,Wave,A17,Phone call,4,3.508771929824561
+SVM,A20,Combing hair,A11,Clap,4,3.508771929824561
+SVM,A01,Standing,A07,Jump in place,4,3.007518796992481
+SVM,A14,Push forward,A20,Combing hair,4,3.007518796992481
+SVM,A14,Push forward,A04,Jog in place,4,3.007518796992481
+SVM,A17,Phone call,A06,"Sit down, stand up",4,3.508771929824561
+SVM,A19,Reading a book,A07,Jump in place,4,3.508771929824561
+SVM,A05,Turn around,A20,Combing hair,4,3.508771929824561
+SVM,A15,Arm circles,A06,"Sit down, stand up",4,3.508771929824561
+SVM,A08,Bend and pick up,A07,Jump in place,4,3.508771929824561
+SVM,A14,Push forward,A05,Turn around,4,3.007518796992481
+SVM,A05,Turn around,A07,Jump in place,4,3.508771929824561
+SVM,A17,Phone call,A13,Arms up and down,4,3.508771929824561
+SVM,A17,Phone call,A07,Jump in place,4,3.508771929824561
+SVM,A02,Sitting,A11,Clap,4,3.508771929824561
+SVM,A19,Reading a book,A20,Combing hair,4,3.508771929824561
+SVM,A12,Boxing,A18,Writing notes,4,3.508771929824561
+SVM,A06,"Sit down, stand up",A14,Push forward,4,3.007518796992481
+SVM,A07,Jump in place,A11,Clap,4,3.007518796992481
+SVM,A12,Boxing,A09,Lunges,4,3.508771929824561
+SVM,A08,Bend and pick up,A16,Typing,4,3.508771929824561
+SVM,A12,Boxing,A03,Walk,4,3.508771929824561
+SVM,A18,Writing notes,A09,Lunges,3,2.631578947368421
+SVM,A04,Jog in place,A03,Walk,3,2.631578947368421
+SVM,A07,Jump in place,A01,Standing,3,2.2556390977443606
+SVM,A18,Writing notes,A01,Standing,3,2.631578947368421
+SVM,A14,Push forward,A08,Bend and pick up,3,2.2556390977443606
+SVM,A06,"Sit down, stand up",A02,Sitting,3,2.2556390977443606
+SVM,A07,Jump in place,A08,Bend and pick up,3,2.2556390977443606
+SVM,A06,"Sit down, stand up",A07,Jump in place,3,2.2556390977443606
+SVM,A13,Arms up and down,A06,"Sit down, stand up",3,2.2556390977443606
+SVM,A12,Boxing,A19,Reading a book,3,2.631578947368421
+SVM,A13,Arms up and down,A09,Lunges,3,2.2556390977443606
+SVM,A08,Bend and pick up,A09,Lunges,3,2.631578947368421
+SVM,A20,Combing hair,A08,Bend and pick up,3,2.631578947368421
+SVM,A01,Standing,A10,Wave,3,2.2556390977443606
+SVM,A20,Combing hair,A18,Writing notes,3,2.631578947368421
+SVM,A15,Arm circles,A11,Clap,3,2.631578947368421
+SVM,A17,Phone call,A01,Standing,3,2.631578947368421
+SVM,A17,Phone call,A12,Boxing,3,2.631578947368421
+SVM,A18,Writing notes,A06,"Sit down, stand up",3,2.631578947368421
+SVM,A03,Walk,A08,Bend and pick up,3,2.631578947368421
+SVM,A15,Arm circles,A20,Combing hair,3,2.631578947368421
+SVM,A13,Arms up and down,A02,Sitting,3,2.2556390977443606
+SVM,A13,Arms up and down,A04,Jog in place,3,2.2556390977443606
+SVM,A13,Arms up and down,A05,Turn around,3,2.2556390977443606
+SVM,A06,"Sit down, stand up",A19,Reading a book,3,2.2556390977443606
+SVM,A15,Arm circles,A08,Bend and pick up,3,2.631578947368421
+SVM,A11,Clap,A07,Jump in place,3,2.631578947368421
+SVM,A08,Bend and pick up,A10,Wave,2,1.7543859649122806
+SVM,A08,Bend and pick up,A14,Push forward,2,1.7543859649122806
+SVM,A18,Writing notes,A14,Push forward,2,1.7543859649122806
+SVM,A04,Jog in place,A06,"Sit down, stand up",2,1.7543859649122806
+SVM,A04,Jog in place,A10,Wave,2,1.7543859649122806
+SVM,A18,Writing notes,A08,Bend and pick up,2,1.7543859649122806
+SVM,A11,Clap,A09,Lunges,2,1.7543859649122806
+SVM,A11,Clap,A05,Turn around,2,1.7543859649122806
+SVM,A11,Clap,A04,Jog in place,2,1.7543859649122806
+SVM,A10,Wave,A06,"Sit down, stand up",2,1.7543859649122806
+SVM,A01,Standing,A16,Typing,2,1.5037593984962405
+SVM,A01,Standing,A17,Phone call,2,1.5037593984962405
+SVM,A20,Combing hair,A05,Turn around,2,1.7543859649122806
+SVM,A20,Combing hair,A12,Boxing,2,1.7543859649122806
+SVM,A10,Wave,A18,Writing notes,2,1.7543859649122806
+SVM,A20,Combing hair,A04,Jog in place,2,1.7543859649122806
+SVM,A09,Lunges,A13,Arms up and down,2,1.7543859649122806
+SVM,A08,Bend and pick up,A11,Clap,2,1.7543859649122806
+SVM,A07,Jump in place,A13,Arms up and down,2,1.5037593984962405
+SVM,A07,Jump in place,A06,"Sit down, stand up",2,1.5037593984962405
+SVM,A05,Turn around,A03,Walk,2,1.7543859649122806
+SVM,A11,Clap,A03,Walk,2,1.7543859649122806
+SVM,A10,Wave,A14,Push forward,2,1.7543859649122806
+SVM,A07,Jump in place,A17,Phone call,2,1.5037593984962405
+SVM,A10,Wave,A03,Walk,2,1.7543859649122806
+SVM,A11,Clap,A06,"Sit down, stand up",2,1.7543859649122806
+SVM,A10,Wave,A04,Jog in place,2,1.7543859649122806
+SVM,A13,Arms up and down,A17,Phone call,2,1.5037593984962405
+SVM,A12,Boxing,A15,Arm circles,2,1.7543859649122806
+SVM,A09,Lunges,A01,Standing,2,1.7543859649122806
+SVM,A02,Sitting,A14,Push forward,2,1.7543859649122806
+SVM,A19,Reading a book,A17,Phone call,2,1.7543859649122806
+SVM,A05,Turn around,A04,Jog in place,2,1.7543859649122806
+SVM,A04,Jog in place,A11,Clap,2,1.7543859649122806
+SVM,A14,Push forward,A16,Typing,2,1.5037593984962405
+SVM,A06,"Sit down, stand up",A15,Arm circles,2,1.5037593984962405
+SVM,A14,Push forward,A18,Writing notes,2,1.5037593984962405
+SVM,A17,Phone call,A10,Wave,2,1.7543859649122806
+SVM,A15,Arm circles,A05,Turn around,2,1.7543859649122806
+SVM,A01,Standing,A09,Lunges,1,0.7518796992481203
+SVM,A01,Standing,A05,Turn around,1,0.7518796992481203
+SVM,A01,Standing,A12,Boxing,1,0.7518796992481203
+SVM,A09,Lunges,A17,Phone call,1,0.8771929824561403
+SVM,A09,Lunges,A14,Push forward,1,0.8771929824561403
+SVM,A09,Lunges,A05,Turn around,1,0.8771929824561403
+SVM,A09,Lunges,A11,Clap,1,0.8771929824561403
+SVM,A10,Wave,A20,Combing hair,1,0.8771929824561403
+SVM,A20,Combing hair,A06,"Sit down, stand up",1,0.8771929824561403
+SVM,A20,Combing hair,A09,Lunges,1,0.8771929824561403
+SVM,A20,Combing hair,A16,Typing,1,0.8771929824561403
+SVM,A12,Boxing,A02,Sitting,1,0.8771929824561403
+SVM,A10,Wave,A01,Standing,1,0.8771929824561403
+SVM,A11,Clap,A08,Bend and pick up,1,0.8771929824561403
+SVM,A11,Clap,A12,Boxing,1,0.8771929824561403
+SVM,A12,Boxing,A07,Jump in place,1,0.8771929824561403
+SVM,A12,Boxing,A13,Arms up and down,1,0.8771929824561403
+SVM,A13,Arms up and down,A12,Boxing,1,0.7518796992481203
+SVM,A13,Arms up and down,A16,Typing,1,0.7518796992481203
+SVM,A15,Arm circles,A09,Lunges,1,0.8771929824561403
+SVM,A15,Arm circles,A03,Walk,1,0.8771929824561403
+SVM,A05,Turn around,A15,Arm circles,1,0.8771929824561403
+SVM,A06,"Sit down, stand up",A13,Arms up and down,1,0.7518796992481203
+SVM,A16,Typing,A20,Combing hair,1,0.8771929824561403
+SVM,A17,Phone call,A18,Writing notes,1,0.8771929824561403
+SVM,A17,Phone call,A03,Walk,1,0.8771929824561403
+SVM,A17,Phone call,A02,Sitting,1,0.8771929824561403
+SVM,A04,Jog in place,A14,Push forward,1,0.8771929824561403
+SVM,A16,Typing,A08,Bend and pick up,1,0.8771929824561403
+SVM,A16,Typing,A07,Jump in place,1,0.8771929824561403
+SVM,A15,Arm circles,A13,Arms up and down,1,0.8771929824561403
+SVM,A04,Jog in place,A17,Phone call,1,0.8771929824561403
+SVM,A16,Typing,A14,Push forward,1,0.8771929824561403
+SVM,A04,Jog in place,A16,Typing,1,0.8771929824561403
+SVM,A05,Turn around,A11,Clap,1,0.8771929824561403
+SVM,A17,Phone call,A14,Push forward,1,0.8771929824561403
+SVM,A03,Walk,A19,Reading a book,1,0.8771929824561403
+SVM,A04,Jog in place,A01,Standing,1,0.8771929824561403
+SVM,A04,Jog in place,A05,Turn around,1,0.8771929824561403
+SVM,A18,Writing notes,A05,Turn around,1,0.8771929824561403
+SVM,A03,Walk,A13,Arms up and down,1,0.8771929824561403
+SVM,A03,Walk,A14,Push forward,1,0.8771929824561403
+SVM,A03,Walk,A17,Phone call,1,0.8771929824561403
+SVM,A04,Jog in place,A08,Bend and pick up,1,0.8771929824561403
+SVM,A03,Walk,A01,Standing,1,0.8771929824561403
+SVM,A02,Sitting,A04,Jog in place,1,0.8771929824561403
+SVM,A02,Sitting,A12,Boxing,1,0.8771929824561403
+SVM,A19,Reading a book,A05,Turn around,1,0.8771929824561403
+SVM,A18,Writing notes,A17,Phone call,1,0.8771929824561403
+SVM,A19,Reading a book,A08,Bend and pick up,1,0.8771929824561403
+SVM,A20,Combing hair,A19,Reading a book,1,0.8771929824561403
+1D-CNN,A18,Writing notes,A02,Sitting,38,33.33333333333333
+1D-CNN,A16,Typing,A18,Writing notes,37,32.45614035087719
+1D-CNN,A07,Jump in place,A04,Jog in place,35,26.31578947368421
+1D-CNN,A19,Reading a book,A18,Writing notes,34,29.82456140350877
+1D-CNN,A13,Arms up and down,A04,Jog in place,33,24.81203007518797
+1D-CNN,A11,Clap,A10,Wave,29,25.438596491228072
+1D-CNN,A10,Wave,A15,Arm circles,28,24.561403508771928
+1D-CNN,A13,Arms up and down,A14,Push forward,26,19.548872180451127
+1D-CNN,A06,"Sit down, stand up",A18,Writing notes,24,18.045112781954884
+1D-CNN,A02,Sitting,A18,Writing notes,24,21.052631578947366
+1D-CNN,A07,Jump in place,A15,Arm circles,24,18.045112781954884
+1D-CNN,A15,Arm circles,A19,Reading a book,23,20.175438596491226
+1D-CNN,A08,Bend and pick up,A15,Arm circles,23,20.175438596491226
+1D-CNN,A11,Clap,A15,Arm circles,22,19.298245614035086
+1D-CNN,A11,Clap,A20,Combing hair,21,18.421052631578945
+1D-CNN,A07,Jump in place,A09,Lunges,21,15.789473684210526
+1D-CNN,A03,Walk,A09,Lunges,20,17.543859649122805
+1D-CNN,A01,Standing,A15,Arm circles,19,14.285714285714285
+1D-CNN,A14,Push forward,A19,Reading a book,19,14.285714285714285
+1D-CNN,A16,Typing,A15,Arm circles,19,16.666666666666664
+1D-CNN,A20,Combing hair,A15,Arm circles,19,16.666666666666664
+1D-CNN,A16,Typing,A19,Reading a book,19,16.666666666666664
+1D-CNN,A04,Jog in place,A07,Jump in place,19,16.666666666666664
+1D-CNN,A17,Phone call,A14,Push forward,18,15.789473684210526
+1D-CNN,A03,Walk,A06,"Sit down, stand up",18,15.789473684210526
+1D-CNN,A19,Reading a book,A16,Typing,18,15.789473684210526
+1D-CNN,A09,Lunges,A06,"Sit down, stand up",18,15.789473684210526
+1D-CNN,A11,Clap,A01,Standing,18,15.789473684210526
+1D-CNN,A14,Push forward,A20,Combing hair,18,13.533834586466165
+1D-CNN,A20,Combing hair,A18,Writing notes,18,15.789473684210526
+1D-CNN,A01,Standing,A19,Reading a book,17,12.781954887218044
+1D-CNN,A02,Sitting,A16,Typing,16,14.035087719298245
+1D-CNN,A20,Combing hair,A13,Arms up and down,16,14.035087719298245
+1D-CNN,A14,Push forward,A10,Wave,16,12.030075187969924
+1D-CNN,A09,Lunges,A03,Walk,16,14.035087719298245
+1D-CNN,A01,Standing,A16,Typing,16,12.030075187969924
+1D-CNN,A01,Standing,A13,Arms up and down,16,12.030075187969924
+1D-CNN,A17,Phone call,A11,Clap,16,14.035087719298245
+1D-CNN,A01,Standing,A10,Wave,16,12.030075187969924
+1D-CNN,A13,Arms up and down,A01,Standing,15,11.278195488721805
+1D-CNN,A05,Turn around,A08,Bend and pick up,15,13.157894736842104
+1D-CNN,A05,Turn around,A20,Combing hair,14,12.280701754385964
+1D-CNN,A17,Phone call,A10,Wave,14,12.280701754385964
+1D-CNN,A02,Sitting,A15,Arm circles,14,12.280701754385964
+1D-CNN,A19,Reading a book,A01,Standing,14,12.280701754385964
+1D-CNN,A08,Bend and pick up,A12,Boxing,14,12.280701754385964
+1D-CNN,A04,Jog in place,A06,"Sit down, stand up",13,11.403508771929824
+1D-CNN,A20,Combing hair,A10,Wave,13,11.403508771929824
+1D-CNN,A12,Boxing,A20,Combing hair,13,11.403508771929824
+1D-CNN,A06,"Sit down, stand up",A08,Bend and pick up,13,9.774436090225564
+1D-CNN,A19,Reading a book,A02,Sitting,13,11.403508771929824
+1D-CNN,A06,"Sit down, stand up",A12,Boxing,12,9.022556390977442
+1D-CNN,A14,Push forward,A04,Jog in place,12,9.022556390977442
+1D-CNN,A10,Wave,A18,Writing notes,12,10.526315789473683
+1D-CNN,A02,Sitting,A10,Wave,12,10.526315789473683
+1D-CNN,A18,Writing notes,A16,Typing,12,10.526315789473683
+1D-CNN,A13,Arms up and down,A08,Bend and pick up,12,9.022556390977442
+1D-CNN,A12,Boxing,A08,Bend and pick up,11,9.649122807017543
+1D-CNN,A12,Boxing,A06,"Sit down, stand up",11,9.649122807017543
+1D-CNN,A17,Phone call,A08,Bend and pick up,11,9.649122807017543
+1D-CNN,A05,Turn around,A07,Jump in place,11,9.649122807017543
+1D-CNN,A03,Walk,A07,Jump in place,11,9.649122807017543
+1D-CNN,A06,"Sit down, stand up",A09,Lunges,10,7.518796992481203
+1D-CNN,A08,Bend and pick up,A14,Push forward,10,8.771929824561402
+1D-CNN,A05,Turn around,A14,Push forward,10,8.771929824561402
+1D-CNN,A05,Turn around,A09,Lunges,10,8.771929824561402
+1D-CNN,A14,Push forward,A15,Arm circles,10,7.518796992481203
+1D-CNN,A13,Arms up and down,A20,Combing hair,10,7.518796992481203
+1D-CNN,A14,Push forward,A05,Turn around,10,7.518796992481203
+1D-CNN,A12,Boxing,A14,Push forward,10,8.771929824561402
+1D-CNN,A15,Arm circles,A10,Wave,10,8.771929824561402
+1D-CNN,A02,Sitting,A17,Phone call,10,8.771929824561402
+1D-CNN,A18,Writing notes,A13,Arms up and down,10,8.771929824561402
+1D-CNN,A12,Boxing,A05,Turn around,9,7.894736842105263
+1D-CNN,A09,Lunges,A15,Arm circles,9,7.894736842105263
+1D-CNN,A05,Turn around,A04,Jog in place,9,7.894736842105263
+1D-CNN,A08,Bend and pick up,A07,Jump in place,9,7.894736842105263
+1D-CNN,A10,Wave,A13,Arms up and down,9,7.894736842105263
+1D-CNN,A20,Combing hair,A01,Standing,8,7.017543859649122
+1D-CNN,A18,Writing notes,A19,Reading a book,8,7.017543859649122
+1D-CNN,A08,Bend and pick up,A09,Lunges,8,7.017543859649122
+1D-CNN,A17,Phone call,A15,Arm circles,8,7.017543859649122
+1D-CNN,A01,Standing,A18,Writing notes,8,6.015037593984962
+1D-CNN,A20,Combing hair,A11,Clap,8,7.017543859649122
+1D-CNN,A16,Typing,A17,Phone call,8,7.017543859649122
+1D-CNN,A10,Wave,A07,Jump in place,8,7.017543859649122
+1D-CNN,A10,Wave,A14,Push forward,8,7.017543859649122
+1D-CNN,A12,Boxing,A13,Arms up and down,8,7.017543859649122
+1D-CNN,A08,Bend and pick up,A13,Arms up and down,8,7.017543859649122
+1D-CNN,A06,"Sit down, stand up",A02,Sitting,8,6.015037593984962
+1D-CNN,A06,"Sit down, stand up",A03,Walk,8,6.015037593984962
+1D-CNN,A18,Writing notes,A10,Wave,7,6.140350877192982
+1D-CNN,A07,Jump in place,A03,Walk,7,5.263157894736842
+1D-CNN,A17,Phone call,A01,Standing,7,6.140350877192982
+1D-CNN,A19,Reading a book,A11,Clap,7,6.140350877192982
+1D-CNN,A05,Turn around,A12,Boxing,7,6.140350877192982
+1D-CNN,A13,Arms up and down,A07,Jump in place,7,5.263157894736842
+1D-CNN,A17,Phone call,A13,Arms up and down,7,6.140350877192982
+1D-CNN,A12,Boxing,A10,Wave,7,6.140350877192982
+1D-CNN,A11,Clap,A14,Push forward,7,6.140350877192982
+1D-CNN,A15,Arm circles,A20,Combing hair,6,5.263157894736842
+1D-CNN,A14,Push forward,A03,Walk,6,4.511278195488721
+1D-CNN,A12,Boxing,A16,Typing,6,5.263157894736842
+1D-CNN,A15,Arm circles,A17,Phone call,6,5.263157894736842
+1D-CNN,A11,Clap,A13,Arms up and down,6,5.263157894736842
+1D-CNN,A20,Combing hair,A19,Reading a book,6,5.263157894736842
+1D-CNN,A20,Combing hair,A17,Phone call,6,5.263157894736842
+1D-CNN,A15,Arm circles,A12,Boxing,6,5.263157894736842
+1D-CNN,A12,Boxing,A02,Sitting,6,5.263157894736842
+1D-CNN,A12,Boxing,A17,Phone call,6,5.263157894736842
+1D-CNN,A09,Lunges,A12,Boxing,6,5.263157894736842
+1D-CNN,A17,Phone call,A20,Combing hair,6,5.263157894736842
+1D-CNN,A06,"Sit down, stand up",A14,Push forward,6,4.511278195488721
+1D-CNN,A05,Turn around,A03,Walk,6,5.263157894736842
+1D-CNN,A19,Reading a book,A17,Phone call,5,4.385964912280701
+1D-CNN,A03,Walk,A04,Jog in place,5,4.385964912280701
+1D-CNN,A07,Jump in place,A08,Bend and pick up,5,3.7593984962406015
+1D-CNN,A05,Turn around,A15,Arm circles,5,4.385964912280701
+1D-CNN,A02,Sitting,A19,Reading a book,5,4.385964912280701
+1D-CNN,A07,Jump in place,A20,Combing hair,5,3.7593984962406015
+1D-CNN,A15,Arm circles,A08,Bend and pick up,5,4.385964912280701
+1D-CNN,A13,Arms up and down,A17,Phone call,5,3.7593984962406015
+1D-CNN,A11,Clap,A19,Reading a book,5,4.385964912280701
+1D-CNN,A17,Phone call,A12,Boxing,5,4.385964912280701
+1D-CNN,A16,Typing,A01,Standing,5,4.385964912280701
+1D-CNN,A02,Sitting,A13,Arms up and down,5,4.385964912280701
+1D-CNN,A17,Phone call,A18,Writing notes,5,4.385964912280701
+1D-CNN,A18,Writing notes,A15,Arm circles,4,3.508771929824561
+1D-CNN,A12,Boxing,A18,Writing notes,4,3.508771929824561
+1D-CNN,A12,Boxing,A03,Walk,4,3.508771929824561
+1D-CNN,A13,Arms up and down,A09,Lunges,4,3.007518796992481
+1D-CNN,A09,Lunges,A07,Jump in place,4,3.508771929824561
+1D-CNN,A10,Wave,A05,Turn around,4,3.508771929824561
+1D-CNN,A10,Wave,A19,Reading a book,4,3.508771929824561
+1D-CNN,A13,Arms up and down,A03,Walk,4,3.007518796992481
+1D-CNN,A15,Arm circles,A01,Standing,4,3.508771929824561
+1D-CNN,A14,Push forward,A18,Writing notes,4,3.007518796992481
+1D-CNN,A17,Phone call,A09,Lunges,4,3.508771929824561
+1D-CNN,A09,Lunges,A04,Jog in place,4,3.508771929824561
+1D-CNN,A08,Bend and pick up,A04,Jog in place,4,3.508771929824561
+1D-CNN,A06,"Sit down, stand up",A05,Turn around,4,3.007518796992481
+1D-CNN,A07,Jump in place,A06,"Sit down, stand up",4,3.007518796992481
+1D-CNN,A06,"Sit down, stand up",A13,Arms up and down,4,3.007518796992481
+1D-CNN,A04,Jog in place,A09,Lunges,4,3.508771929824561
+1D-CNN,A20,Combing hair,A07,Jump in place,4,3.508771929824561
+1D-CNN,A20,Combing hair,A12,Boxing,4,3.508771929824561
+1D-CNN,A20,Combing hair,A16,Typing,4,3.508771929824561
+1D-CNN,A17,Phone call,A05,Turn around,4,3.508771929824561
+1D-CNN,A15,Arm circles,A18,Writing notes,4,3.508771929824561
+1D-CNN,A14,Push forward,A13,Arms up and down,4,3.007518796992481
+1D-CNN,A15,Arm circles,A04,Jog in place,4,3.508771929824561
+1D-CNN,A14,Push forward,A07,Jump in place,4,3.007518796992481
+1D-CNN,A16,Typing,A02,Sitting,4,3.508771929824561
+1D-CNN,A13,Arms up and down,A02,Sitting,3,2.2556390977443606
+1D-CNN,A13,Arms up and down,A15,Arm circles,3,2.2556390977443606
+1D-CNN,A15,Arm circles,A02,Sitting,3,2.631578947368421
+1D-CNN,A15,Arm circles,A14,Push forward,3,2.631578947368421
+1D-CNN,A15,Arm circles,A13,Arms up and down,3,2.631578947368421
+1D-CNN,A10,Wave,A08,Bend and pick up,3,2.631578947368421
+1D-CNN,A18,Writing notes,A09,Lunges,3,2.631578947368421
+1D-CNN,A04,Jog in place,A13,Arms up and down,3,2.631578947368421
+1D-CNN,A06,"Sit down, stand up",A07,Jump in place,3,2.2556390977443606
+1D-CNN,A05,Turn around,A11,Clap,3,2.631578947368421
+1D-CNN,A05,Turn around,A13,Arms up and down,3,2.631578947368421
+1D-CNN,A08,Bend and pick up,A19,Reading a book,3,2.631578947368421
+1D-CNN,A04,Jog in place,A03,Walk,3,2.631578947368421
+1D-CNN,A08,Bend and pick up,A06,"Sit down, stand up",3,2.631578947368421
+1D-CNN,A06,"Sit down, stand up",A04,Jog in place,3,2.2556390977443606
+1D-CNN,A19,Reading a book,A15,Arm circles,3,2.631578947368421
+1D-CNN,A18,Writing notes,A17,Phone call,3,2.631578947368421
+1D-CNN,A09,Lunges,A18,Writing notes,3,2.631578947368421
+1D-CNN,A10,Wave,A01,Standing,3,2.631578947368421
+1D-CNN,A08,Bend and pick up,A18,Writing notes,3,2.631578947368421
+1D-CNN,A03,Walk,A13,Arms up and down,2,1.7543859649122806
+1D-CNN,A18,Writing notes,A20,Combing hair,2,1.7543859649122806
+1D-CNN,A04,Jog in place,A11,Clap,2,1.7543859649122806
+1D-CNN,A08,Bend and pick up,A11,Clap,2,1.7543859649122806
+1D-CNN,A08,Bend and pick up,A10,Wave,2,1.7543859649122806
+1D-CNN,A09,Lunges,A05,Turn around,2,1.7543859649122806
+1D-CNN,A08,Bend and pick up,A20,Combing hair,2,1.7543859649122806
+1D-CNN,A08,Bend and pick up,A02,Sitting,2,1.7543859649122806
+1D-CNN,A07,Jump in place,A13,Arms up and down,2,1.5037593984962405
+1D-CNN,A07,Jump in place,A12,Boxing,2,1.5037593984962405
+1D-CNN,A07,Jump in place,A11,Clap,2,1.5037593984962405
+1D-CNN,A05,Turn around,A18,Writing notes,2,1.7543859649122806
+1D-CNN,A03,Walk,A15,Arm circles,2,1.7543859649122806
+1D-CNN,A06,"Sit down, stand up",A19,Reading a book,2,1.5037593984962405
+1D-CNN,A04,Jog in place,A19,Reading a book,2,1.7543859649122806
+1D-CNN,A18,Writing notes,A06,"Sit down, stand up",2,1.7543859649122806
+1D-CNN,A18,Writing notes,A12,Boxing,2,1.7543859649122806
+1D-CNN,A11,Clap,A17,Phone call,2,1.7543859649122806
+1D-CNN,A10,Wave,A20,Combing hair,2,1.7543859649122806
+1D-CNN,A13,Arms up and down,A06,"Sit down, stand up",2,1.5037593984962405
+1D-CNN,A12,Boxing,A19,Reading a book,2,1.7543859649122806
+1D-CNN,A10,Wave,A12,Boxing,2,1.7543859649122806
+1D-CNN,A12,Boxing,A15,Arm circles,2,1.7543859649122806
+1D-CNN,A09,Lunges,A14,Push forward,2,1.7543859649122806
+1D-CNN,A10,Wave,A04,Jog in place,2,1.7543859649122806
+1D-CNN,A17,Phone call,A04,Jog in place,2,1.7543859649122806
+1D-CNN,A17,Phone call,A06,"Sit down, stand up",2,1.7543859649122806
+1D-CNN,A14,Push forward,A12,Boxing,2,1.5037593984962405
+1D-CNN,A14,Push forward,A08,Bend and pick up,2,1.5037593984962405
+1D-CNN,A17,Phone call,A07,Jump in place,2,1.7543859649122806
+1D-CNN,A15,Arm circles,A11,Clap,2,1.7543859649122806
+1D-CNN,A15,Arm circles,A07,Jump in place,2,1.7543859649122806
+1D-CNN,A20,Combing hair,A02,Sitting,2,1.7543859649122806
+1D-CNN,A01,Standing,A12,Boxing,2,1.5037593984962405
+1D-CNN,A01,Standing,A06,"Sit down, stand up",2,1.5037593984962405
+1D-CNN,A01,Standing,A08,Bend and pick up,1,0.7518796992481203
+1D-CNN,A02,Sitting,A14,Push forward,1,0.8771929824561403
+1D-CNN,A20,Combing hair,A03,Walk,1,0.8771929824561403
+1D-CNN,A20,Combing hair,A04,Jog in place,1,0.8771929824561403
+1D-CNN,A20,Combing hair,A06,"Sit down, stand up",1,0.8771929824561403
+1D-CNN,A20,Combing hair,A09,Lunges,1,0.8771929824561403
+1D-CNN,A20,Combing hair,A14,Push forward,1,0.8771929824561403
+1D-CNN,A01,Standing,A02,Sitting,1,0.7518796992481203
+1D-CNN,A15,Arm circles,A06,"Sit down, stand up",1,0.8771929824561403
+1D-CNN,A15,Arm circles,A16,Typing,1,0.8771929824561403
+1D-CNN,A14,Push forward,A06,"Sit down, stand up",1,0.7518796992481203
+1D-CNN,A14,Push forward,A09,Lunges,1,0.7518796992481203
+1D-CNN,A14,Push forward,A16,Typing,1,0.7518796992481203
+1D-CNN,A14,Push forward,A17,Phone call,1,0.7518796992481203
+1D-CNN,A16,Typing,A08,Bend and pick up,1,0.8771929824561403
+1D-CNN,A16,Typing,A12,Boxing,1,0.8771929824561403
+1D-CNN,A13,Arms up and down,A10,Wave,1,0.7518796992481203
+1D-CNN,A13,Arms up and down,A12,Boxing,1,0.7518796992481203
+1D-CNN,A13,Arms up and down,A16,Typing,1,0.7518796992481203
+1D-CNN,A13,Arms up and down,A19,Reading a book,1,0.7518796992481203
+1D-CNN,A12,Boxing,A01,Standing,1,0.8771929824561403
+1D-CNN,A10,Wave,A16,Typing,1,0.8771929824561403
+1D-CNN,A11,Clap,A07,Jump in place,1,0.8771929824561403
+1D-CNN,A11,Clap,A12,Boxing,1,0.8771929824561403
+1D-CNN,A09,Lunges,A13,Arms up and down,1,0.8771929824561403
+1D-CNN,A09,Lunges,A20,Combing hair,1,0.8771929824561403
+1D-CNN,A10,Wave,A02,Sitting,1,0.8771929824561403
+1D-CNN,A10,Wave,A03,Walk,1,0.8771929824561403
+1D-CNN,A10,Wave,A09,Lunges,1,0.8771929824561403
+1D-CNN,A18,Writing notes,A04,Jog in place,1,0.8771929824561403
+1D-CNN,A18,Writing notes,A08,Bend and pick up,1,0.8771929824561403
+1D-CNN,A18,Writing notes,A11,Clap,1,0.8771929824561403
+1D-CNN,A08,Bend and pick up,A16,Typing,1,0.8771929824561403
+1D-CNN,A08,Bend and pick up,A17,Phone call,1,0.8771929824561403
+1D-CNN,A07,Jump in place,A14,Push forward,1,0.7518796992481203
+1D-CNN,A08,Bend and pick up,A01,Standing,1,0.8771929824561403
+1D-CNN,A08,Bend and pick up,A03,Walk,1,0.8771929824561403
+1D-CNN,A06,"Sit down, stand up",A11,Clap,1,0.7518796992481203
+1D-CNN,A06,"Sit down, stand up",A15,Arm circles,1,0.7518796992481203
+1D-CNN,A04,Jog in place,A12,Boxing,1,0.8771929824561403
+1D-CNN,A04,Jog in place,A14,Push forward,1,0.8771929824561403
+1D-CNN,A04,Jog in place,A17,Phone call,1,0.8771929824561403
+1D-CNN,A05,Turn around,A10,Wave,1,0.8771929824561403
+1D-CNN,A03,Walk,A12,Boxing,1,0.8771929824561403
+1D-CNN,A03,Walk,A17,Phone call,1,0.8771929824561403
+1D-CNN,A04,Jog in place,A02,Sitting,1,0.8771929824561403
+1D-CNN,A04,Jog in place,A05,Turn around,1,0.8771929824561403
+1D-CNN,A18,Writing notes,A14,Push forward,1,0.8771929824561403
+1D-CNN,A19,Reading a book,A08,Bend and pick up,1,0.8771929824561403

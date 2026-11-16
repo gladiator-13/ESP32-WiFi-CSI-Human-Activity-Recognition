@@ -1,7 +1,7 @@
 
 from pathlib import Path
-
 import json
+
 import numpy as np
 import pandas as pd
 
@@ -17,10 +17,14 @@ from sklearn.metrics import (
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 REPORTS_DIR = BASE_DIR / "reports"
-
 OUTPUT_DIR = REPORTS_DIR / "recording_level"
 
-MODELS = ["random_forest", "svm", "cnn"]
+MODELS = [
+    "random_forest",
+    "svm",
+    "cnn",
+    "cnn_bilstm_attention",
+]
 
 MODEL_COLUMNS = {
     "within_location": {
@@ -36,20 +40,17 @@ MODEL_COLUMNS = {
             "actual": "actual_label",
             "predicted": "predicted_label",
         },
+        "cnn_bilstm_attention": {
+            "actual": "actual_label",
+            "predicted": "predicted_label",
+        },
     },
     "lolo": {
-        "random_forest": {
+        model: {
             "actual": "actual_label",
             "predicted": "predicted_label",
-        },
-        "svm": {
-            "actual": "actual_label",
-            "predicted": "predicted_label",
-        },
-        "cnn": {
-            "actual": "actual_label",
-            "predicted": "predicted_label",
-        },
+        }
+        for model in MODELS
     },
 }
 
@@ -88,18 +89,46 @@ def get_prediction_path(model, evaluation, fold=None):
 
 def aggregate_recordings(df, model):
 
-    evaluation = "within_location" if "actual_activity" in df.columns or "true_label" in df.columns else "lolo"
+    evaluation = (
+        "within_location"
+        if (
+            "actual_activity" in df.columns
+            or "true_label" in df.columns
+        )
+        else "lolo"
+    )
 
     actual_col = MODEL_COLUMNS[evaluation][model]["actual"]
     predicted_col = MODEL_COLUMNS[evaluation][model]["predicted"]
 
-    # Each recording must have exactly one true activity.
+    required_columns = [
+        "recording_id",
+        "participant",
+        "location",
+        actual_col,
+        predicted_col,
+    ]
+
+    missing = [
+        column
+        for column in required_columns
+        if column not in df.columns
+    ]
+
+    if missing:
+        raise ValueError(
+            f"{model}: Missing prediction columns: {missing}"
+        )
+
     true_counts = (
         df.groupby("recording_id")[actual_col]
         .nunique()
     )
 
-    assert (true_counts == 1).all()
+    if not (true_counts == 1).all():
+        raise ValueError(
+            f"{model}: Inconsistent true labels within recordings."
+        )
 
     results = []
     total_ties = 0
@@ -109,7 +138,11 @@ def aggregate_recordings(df, model):
         sort=True,
     ):
 
-        assert len(group) == 19
+        if len(group) != 19:
+            raise ValueError(
+                f"{recording_id}: Expected 19 windows, "
+                f"found {len(group)}."
+            )
 
         actual_label = int(group[actual_col].iloc[0])
 
@@ -145,7 +178,9 @@ def aggregate_recordings(df, model):
             "tie": tie,
         })
 
-    return pd.DataFrame(results), total_ties
+    recordings = pd.DataFrame(results)
+
+    return recordings, total_ties
 
 
 def calculate_metrics(recordings):
@@ -153,7 +188,7 @@ def calculate_metrics(recordings):
     y_true = recordings["actual_label"]
     y_pred = recordings["predicted_label"]
 
-    metrics = {
+    return {
         "recording_count": int(len(recordings)),
         "accuracy": accuracy_score(y_true, y_pred),
         "macro_precision": precision_score(
@@ -186,10 +221,13 @@ def calculate_metrics(recordings):
         ),
     }
 
-    return metrics
 
-
-def save_evaluation(recordings, model, evaluation, fold=None):
+def save_evaluation(
+    recordings,
+    model,
+    evaluation,
+    fold=None,
+):
 
     if evaluation == "within_location":
         output_path = (
@@ -205,21 +243,21 @@ def save_evaluation(recordings, model, evaluation, fold=None):
             / model
         )
 
-    output_path.mkdir(parents=True, exist_ok=True)
+    output_path.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
-    # Recording-level predictions
     recordings.to_csv(
         output_path / "recording_predictions.csv",
         index=False,
     )
 
-    # Metrics
     metrics = calculate_metrics(recordings)
 
     with open(output_path / "metrics.json", "w") as f:
         json.dump(metrics, f, indent=4)
 
-    # Per-class metrics
     report = classification_report(
         recordings["actual_label"],
         recordings["predicted_label"],
@@ -233,7 +271,6 @@ def save_evaluation(recordings, model, evaluation, fold=None):
         output_path / "classification_report.csv"
     )
 
-    # Confusion matrix
     matrix = confusion_matrix(
         recordings["actual_label"],
         recordings["predicted_label"],
@@ -244,18 +281,32 @@ def save_evaluation(recordings, model, evaluation, fold=None):
         matrix,
         index=CLASS_NAMES,
         columns=CLASS_NAMES,
-    ).to_csv(output_path / "confusion_matrix.csv")
+    ).to_csv(
+        output_path / "confusion_matrix.csv"
+    )
 
     return metrics
 
 
 def evaluate_one(model, evaluation, fold=None):
 
-    path = get_prediction_path(model, evaluation, fold)
+    path = get_prediction_path(
+        model,
+        evaluation,
+        fold,
+    )
+
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Prediction file not found: {path}"
+        )
 
     df = pd.read_csv(path)
 
-    recordings, tie_count = aggregate_recordings(df, model)
+    recordings, tie_count = aggregate_recordings(
+        df,
+        model,
+    )
 
     metrics = save_evaluation(
         recordings,
@@ -270,7 +321,7 @@ def evaluate_one(model, evaluation, fold=None):
     metrics["tie_count"] = tie_count
 
     print(
-        f"PASS | {model:15s} | "
+        f"PASS | {model:25s} | "
         f"Recordings: {len(recordings):3d} | "
         f"Accuracy: {metrics['accuracy']:.4f} | "
         f"Macro-F1: {metrics['macro_f1']:.4f} | "
@@ -288,7 +339,6 @@ def main():
 
     all_results = []
 
-    # Within-location evaluation
     print("\nWITHIN-LOCATION")
 
     for model in MODELS:
@@ -300,8 +350,8 @@ def main():
 
         all_results.append(result)
 
-    # LOLO evaluation
-    for fold in range(1, 4):
+    # Four dynamically defined LOLO folds.
+    for fold in range(1, 5):
 
         print(f"\nLOLO FOLD {fold}")
 
@@ -318,7 +368,10 @@ def main():
     summary = pd.DataFrame(all_results)
 
     summary_dir = OUTPUT_DIR / "summaries"
-    summary_dir.mkdir(parents=True, exist_ok=True)
+    summary_dir.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     summary.to_csv(
         summary_dir / "recording_level_summary.csv",

@@ -4,7 +4,9 @@
 
 This analysis evaluates whether aggregating overlapping window predictions into recording-level predictions improves activity recognition performance.
 
-Three models are evaluated: Random Forest, SVM, and 1D-CNN.
+Four models are evaluated: Random Forest, SVM, 1D-CNN, and CNN-BiLSTM-Attention.
+
+The dataset contains four recording locations.
 
 ## 2. Recording-level methodology
 
@@ -22,48 +24,59 @@ Recording-level evaluation changes the unit of prediction; it does not involve a
 
 | model | recording_count | accuracy | macro_precision | macro_recall | macro_f1 | weighted_f1 | tie_count |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Random Forest | 125 | 0.3200 | 0.3473 | 0.3179 | 0.3094 | 0.3112 | 11 |
-| SVM | 125 | 0.2880 | 0.2588 | 0.2917 | 0.2695 | 0.2661 | 7 |
-| 1D-CNN | 125 | 0.2640 | 0.2591 | 0.2655 | 0.2525 | 0.2519 | 8 |
+| Random Forest | 168 | 0.2738 | 0.3013 | 0.2778 | 0.2609 | 0.2585 | 18 |
+| SVM | 168 | 0.2619 | 0.2590 | 0.2653 | 0.2403 | 0.2383 | 14 |
+| CNN-BiLSTM-Attention | 168 | 0.2321 | 0.2157 | 0.2361 | 0.2149 | 0.2123 | 18 |
+| 1D-CNN | 168 | 0.2083 | 0.2282 | 0.2111 | 0.1970 | 0.1956 | 7 |
 
-Best within-location model: **Random Forest**, with macro-F1 of 0.3094.
+Best within-location model: **Random Forest**, with macro-F1 of 0.2609.
 
 ## 4. LOLO fold-wise results
 
 | model | fold | recording_count | accuracy | macro_f1 | weighted_f1 | tie_count |
 | --- | --- | --- | --- | --- | --- | --- |
-| SVM | 1 | 204 | 0.1667 | 0.1219 | 0.1231 | 17 |
-| Random Forest | 1 | 204 | 0.1618 | 0.1113 | 0.1121 | 17 |
-| 1D-CNN | 1 | 204 | 0.0980 | 0.0474 | 0.0478 | 11 |
-| 1D-CNN | 2 | 185 | 0.0703 | 0.0266 | 0.0275 | 6 |
-| Random Forest | 2 | 185 | 0.0649 | 0.0214 | 0.0216 | 5 |
-| SVM | 2 | 185 | 0.0541 | 0.0189 | 0.0193 | 7 |
-| SVM | 3 | 186 | 0.0914 | 0.0647 | 0.0626 | 7 |
-| Random Forest | 3 | 186 | 0.0968 | 0.0628 | 0.0622 | 11 |
-| 1D-CNN | 3 | 186 | 0.0806 | 0.0471 | 0.0476 | 9 |
+| Random Forest | 1 | 204 | 0.1569 | 0.1227 | 0.1226 | 21 |
+| SVM | 1 | 204 | 0.1520 | 0.1141 | 0.1150 | 13 |
+| 1D-CNN | 1 | 204 | 0.1275 | 0.0996 | 0.0993 | 13 |
+| CNN-BiLSTM-Attention | 1 | 204 | 0.1029 | 0.0784 | 0.0773 | 10 |
+| Random Forest | 2 | 185 | 0.0432 | 0.0298 | 0.0306 | 11 |
+| SVM | 2 | 185 | 0.0378 | 0.0220 | 0.0220 | 7 |
+| 1D-CNN | 2 | 185 | 0.0432 | 0.0197 | 0.0197 | 7 |
+| CNN-BiLSTM-Attention | 2 | 185 | 0.0324 | 0.0096 | 0.0093 | 6 |
+| Random Forest | 3 | 186 | 0.1022 | 0.0866 | 0.0880 | 16 |
+| SVM | 3 | 186 | 0.1022 | 0.0776 | 0.0755 | 17 |
+| 1D-CNN | 3 | 186 | 0.0806 | 0.0758 | 0.0742 | 12 |
+| CNN-BiLSTM-Attention | 3 | 186 | 0.0645 | 0.0549 | 0.0539 | 11 |
+| SVM | 4 | 192 | 0.0990 | 0.0458 | 0.0437 | 13 |
+| 1D-CNN | 4 | 192 | 0.1042 | 0.0444 | 0.0416 | 9 |
+| CNN-BiLSTM-Attention | 4 | 192 | 0.1094 | 0.0417 | 0.0391 | 5 |
+| Random Forest | 4 | 192 | 0.0781 | 0.0357 | 0.0335 | 6 |
 
 ## 5. LOLO mean and standard deviation
 
-The mean is the unweighted average of the three held-out location folds. Standard deviation is the sample standard deviation (ddof=1).
+The mean is the unweighted average of the four held-out location folds. Standard deviation is the sample standard deviation (ddof=1).
 
 | model | number_of_folds | accuracy_mean | accuracy_std | macro_f1_mean | macro_f1_std | weighted_f1_mean | weighted_f1_std |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| SVM | 3 | 0.1040 | 0.0574 | 0.0685 | 0.0516 | 0.0683 | 0.0522 |
-| Random Forest | 3 | 0.1078 | 0.0494 | 0.0651 | 0.0450 | 0.0653 | 0.0453 |
-| 1D-CNN | 3 | 0.0830 | 0.0140 | 0.0404 | 0.0119 | 0.0409 | 0.0117 |
+| Random Forest | 4 | 0.0951 | 0.0478 | 0.0687 | 0.0441 | 0.0687 | 0.0446 |
+| SVM | 4 | 0.0977 | 0.0467 | 0.0649 | 0.0400 | 0.0641 | 0.0404 |
+| 1D-CNN | 4 | 0.0889 | 0.0359 | 0.0599 | 0.0351 | 0.0587 | 0.0351 |
+| CNN-BiLSTM-Attention | 4 | 0.0773 | 0.0359 | 0.0461 | 0.0287 | 0.0449 | 0.0285 |
 
-Best mean LOLO model: **SVM**, with macro-F1 of 0.0685.
+Best mean LOLO model: **Random Forest**, with macro-F1 of 0.0687.
 
 ## 6. Window-level versus recording-level comparison
 
 | model | evaluation | window_level | recording_level | difference_percentage_points |
 | --- | --- | --- | --- | --- |
-| Random Forest | within_location | 0.2075 | 0.3094 | 10.1892 |
-| Random Forest | lolo_mean | 0.0636 | 0.0651 | 0.1493 |
-| SVM | within_location | 0.1919 | 0.2695 | 7.7571 |
-| SVM | lolo_mean | 0.0634 | 0.0685 | 0.5078 |
-| 1D-CNN | within_location | 0.1965 | 0.2525 | 5.5949 |
-| 1D-CNN | lolo_mean | 0.0408 | 0.0404 | -0.0482 |
+| Random Forest | within_location | 0.2075 | 0.2609 | 5.3329 |
+| Random Forest | lolo_mean | 0.0678 | 0.0687 | 0.0891 |
+| SVM | within_location | 0.1919 | 0.2403 | 4.8388 |
+| SVM | lolo_mean | 0.0641 | 0.0649 | 0.0784 |
+| 1D-CNN | within_location | 0.1965 | 0.1970 | 0.0501 |
+| 1D-CNN | lolo_mean | 0.0604 | 0.0599 | -0.0551 |
+| CNN-BiLSTM-Attention | within_location | 0.1813 | 0.2149 | 3.3537 |
+| CNN-BiLSTM-Attention | lolo_mean | 0.0502 | 0.0461 | -0.4098 |
 
 A positive difference indicates a higher metric after recording-level aggregation. This is a change in evaluation unit, not evidence that the trained model itself improved.
 
@@ -73,18 +86,16 @@ Detailed precision, recall, F1, and support for every activity, model, and evalu
 
 ## 8. Interpretation
 
-Recording-level majority voting improves within-location macro-F1 for all three models compared with window-level evaluation. The improvement is smaller or inconsistent under LOLO evaluation.
+Within-location and cross-location performance are reported separately. Recording-level majority voting can reduce some window-level prediction variability, but it does not necessarily remove the difficulty of generalizing to unseen locations.
 
-This suggests that aggregating multiple windows can reduce some window-level prediction variability, but does not remove the difficulty of generalizing to unseen locations.
-
-Location-specific differences should be interpreted descriptively. Only three locations are available, so these results do not establish a causal explanation for the performance differences.
+Location-specific differences should be interpreted descriptively. Four locations are available, and the observed differences do not establish a causal explanation for performance variation.
 
 ## 9. Limitations
 
 - The 50% overlapping windows are correlated observations.
 - Majority voting discards prediction confidence.
 - The deterministic tie-break can affect tied recordings.
-- Only three locations are used for LOLO evaluation.
+- Only four locations are used for LOLO evaluation.
 - Fold means are unweighted across locations.
 - No statistical significance claim is made.
 

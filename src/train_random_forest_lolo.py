@@ -135,7 +135,7 @@ def run_fold(fold):
     # Load all splits.
     X_train, y_train, _ = load_split(fold, "train")
     X_val, y_val, _ = load_split(fold, "validation")
-    X_test, y_test, test_metadata = load_split(fold, "test")
+    # X_test, y_test, test_metadata = load_split(fold, "test")
 
     # --------------------------------------------------
     # HYPERPARAMETER SEARCH
@@ -224,6 +224,17 @@ def run_fold(fold):
     start_time = time.time()
     final_model.fit(X_train_val, y_train_val)
     refit_time = time.time() - start_time
+
+    # --------------------------------------------------
+    # LOAD HELD-OUT TEST DATA
+    # --------------------------------------------------
+
+    print("\nLoading held-out test data...")
+
+    X_test, y_test, test_metadata = load_split(
+        fold,
+        "test"
+    )
 
     # --------------------------------------------------
     # HELD-OUT TEST EVALUATION
@@ -359,15 +370,46 @@ def run_fold(fold):
 # MAIN
 # --------------------------------------------------
 
+
 def main():
 
     print("=" * 70)
     print("RANDOM FOREST - LEAVE-ONE-LOCATION-OUT EXPERIMENT")
     print("=" * 70)
 
+    # Automatically detect all available LOLO folds.
+    split_file = (
+        PROJECT_ROOT
+        / "data"
+        / "processed"
+        / "splits"
+        / "lolo_recording_splits.csv"
+    )
+
+    if not split_file.exists():
+        raise FileNotFoundError(
+            f"LOLO split file not found: {split_file}"
+        )
+
+    split_df = pd.read_csv(split_file)
+
+    folds = sorted(
+        [
+            f"fold_{int(str(value).replace('fold_', ''))}"
+            for value in split_df["fold"].dropna().unique()
+        ],
+        key=lambda x: int(x.replace("fold_", ""))
+    )
+
+    if not folds:
+        raise ValueError("No LOLO folds found.")
+
+    print(f"\nDetected {len(folds)} LOLO folds:")
+    print(folds)
+
     all_results = []
 
-    for fold in ["fold_1", "fold_2", "fold_3"]:
+    for fold in folds:
 
         result = run_fold(fold)
         all_results.append(result)
@@ -412,3 +454,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

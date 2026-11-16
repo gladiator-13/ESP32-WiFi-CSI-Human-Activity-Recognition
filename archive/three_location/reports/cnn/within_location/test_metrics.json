@@ -1,0 +1,11 @@
+{
+    "model": "1D-CNN",
+    "split": "within_location",
+    "evaluation": "test",
+    "test_accuracy": 0.20294736842105263,
+    "test_macro_precision": 0.20159908343005012,
+    "test_macro_recall": 0.2038220551378446,
+    "test_macro_f1": 0.19651579899105417,
+    "test_weighted_f1": 0.19649712446296091,
+    "test_samples": 2375
+}

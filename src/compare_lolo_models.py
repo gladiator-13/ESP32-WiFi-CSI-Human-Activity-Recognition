@@ -26,13 +26,15 @@ DOCS_DIR = BASE_DIR / "docs"
 MODELS = [
     "random_forest",
     "svm",
-    "cnn"
+    "cnn",
+    "cnn_bilstm_attention"
 ]
 
 MODEL_DISPLAY_NAMES = {
     "random_forest": "Random Forest",
     "svm": "SVM",
-    "cnn": "1D-CNN"
+    "cnn": "1D-CNN",
+    "cnn_bilstm_attention": "CNN-BiLSTM-Attention"
 }
 
 METRICS = [
@@ -249,8 +251,8 @@ def load_within_location_results(model):
 
         data = df.iloc[0].to_dict()
 
-    # CNN stores metrics as JSON.
-    elif model == "cnn":
+    # CNN and CNN-BiLSTM-Attention store metrics as JSON.
+    elif model in ["cnn", "cnn_bilstm_attention"]:
 
         path = report_dir / "test_metrics.json"
         data = read_json(path)
@@ -582,12 +584,13 @@ def main():
 
 ## 1. Objective
 
-This analysis compares three machine learning models for ESP32 Wi-Fi
+This analysis compares four machine learning models for ESP32 Wi-Fi
 CSI Human Activity Recognition:
 
 - Random Forest
 - Support Vector Machine (SVM)
 - 1D Convolutional Neural Network (CNN)
+- CNN-BiLSTM-Attention
 
 Two evaluation settings are considered:
 
@@ -595,7 +598,7 @@ Two evaluation settings are considered:
    splits are created within each recording location.
 2. **Leave-One-Location-Out (LOLO):** Each fold holds out one entire
    recording location for testing. Training and validation data come
-   from the other two locations.
+   from the other three locations.
 
 The primary comparison metric is macro-F1 because it gives equal
 importance to all 20 activity classes.
@@ -624,7 +627,7 @@ importance to all 20 activity classes.
 )}
 
 The mean is calculated as the unweighted arithmetic average of the
-three location-specific fold results. Standard deviation uses the
+four location-specific fold results. Standard deviation uses the
 sample standard deviation (ddof = 1).
 
 ### 2.3 Model comparison
@@ -733,26 +736,12 @@ entirely held-out location.
 
     hardest_location = hardest_location_rows.index[0]
 
-    rf_mean = float(
-        lolo_summary_df.loc[
-            lolo_summary_df["model"] == "Random Forest",
-            "macro_f1_mean"
-        ].iloc[0]
-    )
 
-    svm_mean = float(
-        lolo_summary_df.loc[
-            lolo_summary_df["model"] == "SVM",
-            "macro_f1_mean"
-        ].iloc[0]
-    )
+    model_means = {
+        row["model"]: float(row["macro_f1_mean"])
+        for _, row in lolo_summary_df.iterrows()
+    }
 
-    cnn_mean = float(
-        lolo_summary_df.loc[
-            lolo_summary_df["model"] == "1D-CNN",
-            "macro_f1_mean"
-        ].iloc[0]
-    )
 
     report += f"""## 5. Key Findings
 
@@ -762,16 +751,15 @@ entirely held-out location.
    macro-F1 of {worst_lolo['macro_f1_mean'] * 100:.2f}%.
 3. **Most challenging held-out location by average macro-F1:**
    {hardest_location}.
-4. Random Forest mean LOLO macro-F1:
-   {rf_mean * 100:.2f}%.
-5. SVM mean LOLO macro-F1:
-   {svm_mean * 100:.2f}%.
-6. CNN mean LOLO macro-F1:
-   {cnn_mean * 100:.2f}%.
+4. Model-wise mean LOLO macro-F1:
+    {chr(10).join(
+        f"   - {model}: {score * 100:.2f}%."
+        for model, score in model_means.items()
+    )}
 
 """
 
-    if abs(rf_mean - svm_mean) < 0.005:
+    if abs(model_means["Random Forest"] - model_means["SVM"]) < 0.005:
 
         report += (
             "Random Forest and SVM have very similar average LOLO "
@@ -779,12 +767,14 @@ entirely held-out location.
             "as evidence of a meaningful performance advantage.\n\n"
         )
 
-    if cnn_mean < rf_mean and cnn_mean < svm_mean:
+    best_model_name = best_lolo["model"]
 
-        report += (
-            "The CNN has lower mean LOLO macro-F1 than both "
-            "classical models in these experiments.\n\n"
-        )
+    report += (
+        f"The best-performing model by mean LOLO macro-F1 is "
+        f"{best_model_name}. This ranking describes the current "
+        f"experimental results and does not establish statistical "
+        f"significance.\n\n"
+    )
 
     report += """## 6. Discussion
 
@@ -807,7 +797,7 @@ can obscure poor recognition of individual activities.
 
 ## 7. Limitations
 
-- Only three recording locations are available.
+- Only four recording locations are available.
 - Each LOLO fold tests on one held-out location.
 - The fold-wise test windows overlap by 50%, so window-level
   predictions are not statistically independent.

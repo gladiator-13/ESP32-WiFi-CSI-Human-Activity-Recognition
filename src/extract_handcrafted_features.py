@@ -195,12 +195,22 @@ def main():
     )
 
     # Three independent LOLO folds
-    for fold in [1, 2, 3]:
+    # Four independent LOLO folds
+    lolo_folds = sorted(
+        [
+            path.name
+            for path in (INPUT_DIR / "lolo").glob("fold_*")
+            if path.is_dir()
+        ]
+    )
+
+    for fold_name in lolo_folds:
 
         process_dataset(
-            INPUT_DIR / "lolo" / f"fold_{fold}",
-            OUTPUT_DIR / "lolo" / f"fold_{fold}"
+            INPUT_DIR / "lolo" / fold_name,
+            OUTPUT_DIR / "lolo" / fold_name
         )
+
 
     print("\n" + "=" * 65)
     print("ALL FEATURE EXTRACTION TASKS COMPLETED!")

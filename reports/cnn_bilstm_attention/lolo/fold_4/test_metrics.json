@@ -1,0 +1,13 @@
+{
+    "test_accuracy": 0.10855263157894737,
+    "test_macro_precision": 0.06176520415773447,
+    "test_macro_recall": 0.11535087719298245,
+    "test_macro_f1": 0.0496701721573958,
+    "test_weighted_f1": 0.04707897249956884,
+    "model": "CNN-BiLSTM-Attention",
+    "split": "lolo",
+    "fold": 4,
+    "held_out_location": "Location_4",
+    "best_epoch": 22,
+    "total_epochs": 32
+}

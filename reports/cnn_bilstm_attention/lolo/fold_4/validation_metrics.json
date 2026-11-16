@@ -1,0 +1,12 @@
+{
+    "validation_accuracy": 0.1844244758237056,
+    "validation_macro_precision": 0.2141073405650126,
+    "validation_macro_recall": 0.18427318295739345,
+    "validation_macro_f1": 0.1902556108330678,
+    "validation_weighted_f1": 0.18995112440556472,
+    "model": "CNN-BiLSTM-Attention",
+    "split": "lolo",
+    "fold": 4,
+    "best_epoch": 22,
+    "total_epochs": 32
+}

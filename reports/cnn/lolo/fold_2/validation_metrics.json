@@ -1,12 +1,12 @@
 {
-    "validation_accuracy": 0.22015404364569963,
-    "validation_macro_precision": 0.1956734896671095,
-    "validation_macro_recall": 0.22473684210526318,
-    "validation_macro_f1": 0.19646362640707926,
-    "validation_weighted_f1": 0.19265304734977173,
+    "validation_accuracy": 0.20628183361629882,
+    "validation_macro_precision": 0.20940083305200202,
+    "validation_macro_recall": 0.20780075187969924,
+    "validation_macro_f1": 0.2051890197324217,
+    "validation_weighted_f1": 0.2037684390744598,
     "model": "1D-CNN",
     "split": "lolo",
     "fold": 2,
-    "best_epoch": 66,
-    "total_epochs": 80
+    "best_epoch": 32,
+    "total_epochs": 47
 }

@@ -140,11 +140,21 @@ def main():
         NORMALIZED_DIR / "within_location"
     )
 
-    for fold in [1, 2, 3]:
+    lolo_folds = sorted(
+        [
+            path.name
+            for path in (NORMALIZED_DIR / "lolo").glob("fold_*")
+            if path.is_dir()
+        ]
+    )
+
+    for fold_name in lolo_folds:
+
+        fold_number = fold_name.split("_")[-1]
 
         validate_dataset(
-            f"LOLO FOLD {fold}",
-            NORMALIZED_DIR / "lolo" / f"fold_{fold}"
+            f"LOLO FOLD {fold_number}",
+            NORMALIZED_DIR / "lolo" / fold_name
         )
 
     print("\n" + "=" * 65)

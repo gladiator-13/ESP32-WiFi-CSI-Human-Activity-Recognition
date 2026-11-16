@@ -1,0 +1,8 @@
+{
+    "recording_count": 192,
+    "accuracy": 0.078125,
+    "macro_precision": 0.023508403361344538,
+    "macro_recall": 0.08333333333333333,
+    "macro_f1": 0.03568743917581127,
+    "weighted_f1": 0.03345697422732307
+}

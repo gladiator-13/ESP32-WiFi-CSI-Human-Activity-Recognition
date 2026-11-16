@@ -96,12 +96,23 @@ def main():
         FEATURE_DIR / "within_location"
     )
 
-    for fold in [1, 2, 3]:
+    lolo_folds = sorted(
+        [
+            path.name
+            for path in (FEATURE_DIR / "lolo").glob("fold_*")
+            if path.is_dir()
+        ]
+    )
+
+    for fold_name in lolo_folds:
+
+        fold_number = fold_name.split("_")[-1]
 
         validate_dataset(
-            f"LOLO FOLD {fold}",
-            FEATURE_DIR / "lolo" / f"fold_{fold}"
+            f"LOLO FOLD {fold_number}",
+            FEATURE_DIR / "lolo" / fold_name
         )
+
 
     print("\n" + "=" * 60)
     print("ALL FEATURE VALIDATIONS PASSED!")

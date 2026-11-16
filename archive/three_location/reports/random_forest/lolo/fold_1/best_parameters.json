@@ -1,0 +1,17 @@
+{
+    "model": "RandomForestClassifier",
+    "fold": "fold_1",
+    "n_estimators": 300,
+    "random_state": 42,
+    "class_weight": null,
+    "best_parameters": {
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1
+    },
+    "best_validation_macro_f1": 0.12844931910651067,
+    "training_samples_after_refit": 7049,
+    "number_of_features": 468,
+    "number_of_classes": 20,
+    "refit_time_seconds": 16.78953528404236
+}

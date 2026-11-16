@@ -1,0 +1,13 @@
+{
+    "test_accuracy": 0.07328805885681947,
+    "test_macro_precision": 0.07651186875724907,
+    "test_macro_recall": 0.07208399787347156,
+    "test_macro_f1": 0.04614888450779821,
+    "test_weighted_f1": 0.04632938174809802,
+    "model": "1D-CNN",
+    "split": "lolo",
+    "fold": 3,
+    "held_out_location": "Location_3",
+    "best_epoch": 28,
+    "total_epochs": 43
+}

@@ -1,0 +1,32 @@
+{
+    "model": "CNN-BiLSTM-Attention",
+    "split": "lolo",
+    "fold": 4,
+    "held_out_location": "Location_4",
+    "architecture": {
+        "conv1_filters": 128,
+        "conv1_kernel_size": 5,
+        "conv2_filters": 256,
+        "conv2_kernel_size": 5,
+        "bilstm_units_per_direction": 125,
+        "attention": "AdditiveTemporalAttention",
+        "dropout": 0.3
+    },
+    "input_shape": [
+        200,
+        52
+    ],
+    "num_classes": 20,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "maximum_epochs": 100,
+    "early_stopping_monitor": "val_macro_f1",
+    "early_stopping_patience": 10,
+    "reduce_lr_monitor": "val_loss",
+    "reduce_lr_patience": 5,
+    "random_seed": 42,
+    "class_weights": null,
+    "model_selection_metric": "validation_macro_f1",
+    "test_evaluated": true
+}

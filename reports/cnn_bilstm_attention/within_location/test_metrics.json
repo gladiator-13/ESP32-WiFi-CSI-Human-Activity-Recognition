@@ -1,0 +1,12 @@
+{
+    "model": "CNN-BiLSTM-Attention",
+    "split": "within_location_test",
+    "accuracy": 0.18515037593984962,
+    "macro_precision": 0.18788683923898714,
+    "macro_recall": 0.18706140350877193,
+    "macro_f1": 0.18131566067265967,
+    "weighted_f1": 0.1800474761439856,
+    "test_samples": 3192,
+    "test_recordings": 168,
+    "number_of_classes": 20
+}

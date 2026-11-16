@@ -102,7 +102,7 @@ def validate_dataset(split_file, dataset_folder, fold=None):
     source = source[
         source["activity"].isin(ACTIVITY_CLASSES)
     ].copy()
-    
+
     all_metadata = []
 
     for split_name in ["train", "validation", "test"]:
@@ -183,7 +183,9 @@ def main():
 
     print("\nLOLO")
 
-    for fold in [1, 2, 3]:
+    for fold in sorted(
+        pd.read_csv(SPLITS_DIR / "lolo_recording_splits.csv")["fold"].unique()
+    ):
 
         print(f"\nFOLD {fold}")
 

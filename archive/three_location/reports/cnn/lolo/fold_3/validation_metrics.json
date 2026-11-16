@@ -1,0 +1,12 @@
+{
+    "validation_accuracy": 0.23846653671215073,
+    "validation_macro_precision": 0.2438653806038796,
+    "validation_macro_recall": 0.24026315789473682,
+    "validation_macro_f1": 0.23318436506998902,
+    "validation_weighted_f1": 0.23141665685924837,
+    "model": "1D-CNN",
+    "split": "lolo",
+    "fold": 3,
+    "best_epoch": 28,
+    "total_epochs": 43
+}

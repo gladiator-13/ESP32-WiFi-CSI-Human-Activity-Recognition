@@ -1,0 +1,21 @@
+model,actual_label,actual_activity,predicted_label,predicted_activity,misclassified_windows,percentage_of_actual_class
+SVM,A13,Arms up and down,A14,Push forward,45,33.83458646616541
+SVM,A16,Typing,A19,Reading a book,31,27.192982456140353
+SVM,A19,Reading a book,A18,Writing notes,31,27.192982456140353
+SVM,A07,Jump in place,A04,Jog in place,26,19.548872180451127
+SVM,A01,Standing,A19,Reading a book,25,18.796992481203006
+SVM,A09,Lunges,A06,"Sit down, stand up",25,21.929824561403507
+SVM,A20,Combing hair,A15,Arm circles,25,21.929824561403507
+SVM,A17,Phone call,A11,Clap,22,19.298245614035086
+SVM,A11,Clap,A15,Arm circles,21,18.421052631578945
+SVM,A18,Writing notes,A16,Typing,21,18.421052631578945
+SVM,A20,Combing hair,A10,Wave,21,18.421052631578945
+SVM,A02,Sitting,A01,Standing,20,17.543859649122805
+SVM,A04,Jog in place,A07,Jump in place,20,17.543859649122805
+SVM,A19,Reading a book,A02,Sitting,20,17.543859649122805
+SVM,A18,Writing notes,A02,Sitting,19,16.666666666666664
+SVM,A02,Sitting,A16,Typing,18,15.789473684210526
+SVM,A06,"Sit down, stand up",A04,Jog in place,18,13.533834586466165
+SVM,A07,Jump in place,A09,Lunges,18,13.533834586466165
+SVM,A12,Boxing,A06,"Sit down, stand up",18,15.789473684210526
+SVM,A13,Arms up and down,A11,Clap,18,13.533834586466165
